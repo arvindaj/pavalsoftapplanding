@@ -1,0 +1,32 @@
+   .btn-dark:hover {
+          transform: scale(1.05);
+          transition: transform 0.2s ease;
+        }
+        @media (min-width: 2560px) {
+          h1.fs-2 {
+            font-size: 3.5rem !important;
+          }
+          p.fs-5 {
+            font-size: 1.75rem !important;
+          }
+          h2.fs-4 {
+            font-size: 2rem !important;
+          }
+          p.fs-6 {
+            font-size: 1.25rem !important;
+          }
+          .btn-dark {
+            font-size: 1.5rem !important;
+            padding: 0.75rem 2.5rem !important;
+          }
+          img[alt="User-friendly mobile app interface"] {
+            max-height: 60vh !important;
+          }
+          img[alt="Technology visual representation"] {
+            max-width: 80% !important;
+          }
+            .container {
+            max-width: 2100px !important;
+          }
+          
+        }

@@ -16,8 +16,7 @@ import img2 from '../assets/img/clogo2.png';
 import img3 from '../assets/img/clogo3.png';
 import img4 from '../assets/img/clogo4.png';
 import img5 from '../assets/img/clogo5.png';
-import '../assets/css/hero.css'
-
+import '../assets/css/hero.css';
 
 const HeroSection = () => {
   return (
@@ -43,7 +42,7 @@ const HeroSection = () => {
           <div className="navbar-brand text-center">
             <img src={logo} alt="Logo" className="img-fluid" />
             <div className="mt-1 mt-sm-2">
-              <small className="d-block  ms-5 text-center">Build Bold. Scale Smart. Win Digital.</small>
+              <small className="d-block ms-5 text-center">Build Bold. Scale Smart. Win Digital.</small>
             </div>
             <div className="d-none d-lg-block position-absolute">
               <div className="bg-dark position-absolute end-0"></div>
@@ -70,7 +69,6 @@ const HeroSection = () => {
               </div>
               <button className="btn btn-dark btn-sm">Get A Quote</button>
             </div>
-
           </div>
         </div>
       </nav>
@@ -93,19 +91,30 @@ const HeroSection = () => {
       {/* Recognized Section */}
       <div className="container my-3 my-sm-4">
         <div className="d-flex flex-column flex-lg-row align-items-center">
-          <Carousel controls={true} indicators={false} interval={3000} className=" w-lg-50 carousel-box">
-            {[1, 2, 3].map((slide) => (
-              <Carousel.Item key={slide}>
-                <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
-                  <p className="mb-0 text-dark">
-                    Slide {slide}: Our team is here to provide you with tailored solutions that will elevate your brand and engage your audience.
-                  </p>
-                </div>
-              </Carousel.Item>
-            ))}
+          <Carousel controls={true} indicators={false} interval={3000} className="w-lg-50 carousel-box">
+            <Carousel.Item>
+              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
+                <p className="mb-0 text-dark">
+                  Our expert team crafts innovative mobile apps tailored to your business needs, ensuring seamless performance across platforms.
+                </p>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
+                <p className="mb-0 text-dark">
+                  We deliver scalable solutions, from MVP to enterprise-grade apps, driving growth and user engagement.
+                </p>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
+                <p className="mb-0 text-dark">
+                  Partner with us for end-to-end development, leveraging cutting-edge technologies to elevate your brand.
+                </p>
+              </div>
+            </Carousel.Item>
           </Carousel>
           <div className="text-center text-lg-start mt-3 mt-lg-0 ms-lg-4">
-
             <div className="d-flex flex-wrap gap-3 mt-3">
               <h5 className="fw-bold">Recognized <br />By</h5>
               <div className="rline1"></div>
@@ -118,6 +127,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
       {/* Marquee Section */}
       <div className="marquee-container overflow-hidden mb-3 mb-sm-5">
         <div className="marquee d-flex">
