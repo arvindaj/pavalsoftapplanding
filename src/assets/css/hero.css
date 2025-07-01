@@ -82,6 +82,24 @@
   z-index: -1;
 }
 
+/* Adjust button icon size */
+  .trackyour p {
+    width: 60%;
+  }
+
+/* Adjust Swiper height for mobile */
+@media (max-width: 767px) {
+  .trackyour {
+    width: 100%;/* Slightly taller for mobile readability */
+  }
+}
+/* Adjust Swiper height for mobile */
+@media (max-width: 320px) {
+  .trackyour {
+    width: 100%;/* Slightly taller for mobile readability */
+  }
+}
+
 /* Navbar */
 .navbar.navbar-expand-lg.navbar-light {
   padding: 1rem 1.5rem;

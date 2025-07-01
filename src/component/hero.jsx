@@ -1,5 +1,8 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import React, { useRef } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import bg from '../assets/img/minebg.png';
 import bgbox from '../assets/img/Rectangle 9.png';
 import logo from '../assets/img/logo.png';
@@ -16,9 +19,32 @@ import img2 from '../assets/img/clogo2.png';
 import img3 from '../assets/img/clogo3.png';
 import img4 from '../assets/img/clogo4.png';
 import img5 from '../assets/img/clogo5.png';
-import '../assets/css/hero.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import '../assets/css/hero.css'; // Keep custom CSS for non-Bootstrap styles
 
 const HeroSection = () => {
+  const swiperRef = useRef(null);
+
+  // Function to go to the previous slide
+  const handlePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  // Function to go to the next slide
+  const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const slideData = [
+    { text: 'Our team is here to provide you with tailored solutions.' },
+    { text: 'Transform your ideas into reality with our custom mobile app development services.' },
+    { text: 'Boost your digital presence with high-performance apps built using the latest technologies.' },
+  ];
+
   return (
     <div className="position-relative">
       {/* Background Images */}
@@ -91,30 +117,39 @@ const HeroSection = () => {
       {/* Recognized Section */}
       <div className="container my-3 my-sm-4">
         <div className="d-flex flex-column flex-lg-row align-items-center">
-          <Carousel controls={true} indicators={false} interval={3000} className="w-lg-50 carousel-box">
-            <Carousel.Item>
-              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
-                <p className="mb-0 text-dark">
-                  Our expert team crafts innovative mobile apps tailored to your business needs, ensuring seamless performance across platforms.
-                </p>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
-                <p className="mb-0 text-dark">
-                  We deliver scalable solutions, from MVP to enterprise-grade apps, driving growth and user engagement.
-                </p>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className="d-flex align-items-center justify-content-start p-2 p-sm-3">
-                <p className="mb-0 text-dark">
-                  Partner with us for end-to-end development, leveraging cutting-edge technologies to elevate your brand.
-                </p>
-              </div>
-            </Carousel.Item>
-          </Carousel>
-          <div className="text-center text-lg-start mt-3 mt-lg-0 ms-lg-4">
+          <div className="container-fluid px-4 px-lg-5 py-md-4 col-12 col-lg-6 d-flex flex-row position-relative">
+             <button
+              className="bi bi-chevron-down ms-2"
+              onClick={handleNext}
+              style={{ width: '40px', height: '40px', border: 'none', background: 'transparent' }}
+            ></button>
+            <Swiper
+              direction="vertical"
+              modules={[Autoplay, Navigation]}
+              autoplay={{ delay: 3000, disableOnInteraction: true }}
+              loop={true}
+              allowTouchMove={true}
+              slidesPerView={1}
+              className="trackyour"
+              style={{ height: '100px', overflow: 'hidden' }}
+              ref={swiperRef}
+            >
+              {slideData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="d-flex flex-column justify-content-start align-items-start">
+                    
+                    <p className="text-black text-start mb-0 mx-md-4 hero-text">{item.text}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {/* Navigation Buttons */}
+            
+           
+         
+          </div>
+
+          <div className="text-center text-lg-start mt-3 mt-lg-0 ms-lg-4 col-12 col-lg-6">
             <div className="d-flex flex-wrap gap-3 mt-3">
               <h5 className="fw-bold">Recognized <br />By</h5>
               <div className="rline1"></div>
