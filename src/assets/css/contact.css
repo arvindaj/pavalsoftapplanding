@@ -1,0 +1,140 @@
+.contact-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+.bg-img {
+  width: 120%;
+  height: 100%;
+  transform: translate(-10%, -10%) rotate(180deg);
+  opacity: 0.2;
+}
+
+.contact-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 4rem 0rem 0rem 4rem;
+}
+
+.contact-top-left {
+  width: 40%;
+}
+
+.contact-heading {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #222;
+}
+
+.contact-para {
+  margin: 1rem 0;
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+.contact-botton {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.contact-top-right {
+  width: 60%;
+  text-align: center;
+  border-radius: 3%;
+  position: relative;
+}
+
+.girl-img {
+  height: auto;
+  border-radius: 3%;
+  z-index: 1;
+  scale:calc(0.8);
+}
+
+.contact-bottom {
+  margin-top: 2rem;
+  padding:0 8rem 4rem 8rem;
+  text-align: center;
+  font-size: 14px;
+
+}
+
+.bottom-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.bottom-para {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 925px) {
+  .contact-wrapper {
+    padding: 10% 0rem 10% 2rem;
+    padding-top: 0;
+  }
+  .contact-top{
+    padding: 0;
+  }
+
+  .lap-img {
+    max-width: 80%;
+  }
+  .contact-bottom {
+    padding: 0 2rem 0 0 ;
+  }
+  .bottom-para {
+    font-size: 18px;
+  }
+}
+@media (max-width: 475px) {
+  .contact-wrapper {
+    padding: 20px;
+  }
+  .girl-img {
+    display: none;
+  }
+  .contact-top {
+    flex-direction: column-reverse;
+  }
+  .contact-top-left {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-heading {
+    text-align: left;
+  }
+  .contact-para {
+    text-align: left;
+  }
+  .bottom-heading {
+    text-align: left;
+  }
+  .bottom-para {
+    text-align: left;
+    font-size: 16px;
+  }
+}
