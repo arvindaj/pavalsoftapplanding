@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",

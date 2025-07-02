@@ -17,17 +17,19 @@ function Services() {
                 <div className="container">
                     <div className="row align-items-center">
                         {/* Left Column */}
-                        <div className="col-12 col-md-6 text-center text-md-start bg-light mb-4 mb-md-0 mb-lg-0 mt-5">
-                            <h1 className="servicesheading mb-3 fs-4">
+                        <div className="col-12 col-md-6 text-center text-md-start  mb-md-0 mb-lg-4 " style={{backgroundColor:'#EAEAEA99'}}>
+                            <h1 className="servicesheading mb-5 fs-4 ">
                                 Software Product Development
                             </h1>
-                            <p className="mb-4">
-                                As a top software development company, we help businesses drive growth and thrive in a competitive landscape with innovative software solutions. Whether you're a startup seeking dynamic software, a growing enterprise needing an integrated digital ecosystem, or a corporation looking to modernize legacy software, our custom software development services cater to all unique business needs.<br/><br/>
+                            <p className="">
+                                As a top software development company, we help businesses drive growth and thrive in a competitive landscape with innovative software solutions. Whether you're a startup seeking dynamic software, a growing enterprise needing an integrated digital ecosystem, or a corporation looking to modernize legacy software, our custom software development services cater to all unique business needs.
                             </p>
                         </div>
                         {/* Right Column */}
-                        <div className="col-12 col-md-6 text-center text-md-end">
-                            <div className="d-flex justify-content-center justify-content-md-end mb-4 flex-wrap gap-2">
+                        <div className="col-12 col-md-6 text-center text-md-center " style={
+                            {backgroundColor:'#EAEAEA99'}
+                        }>
+                            <div className="d-flex justify-content-center justify-content-md-center flex-wrap gap-2 ">
                                 <button className="btn btn-dark me-md-2">
                                     Explore Now <i className="fa-solid fa-arrow-right-long ms-2"></i>
                                 </button>
@@ -35,9 +37,12 @@ function Services() {
                                     Go Next <i className="fa-solid fa-arrow-right-long ms-2"></i>
                                 </button>
                             </div>
-                            <div className="row align-items-center bg-light">
+                            <div className="row align-items-center bg-light ">
                                 <div className="col-12 col-sm-6 text-center">
-                                    <img src={icon4} alt="Software Development" className="img-fluid" data-aos="fade-right" />
+                                    <img src={icon4} alt="Software Development" className="img-fluid" data-aos="fade-right" style={{
+                                        scale:'0.9'
+                                    }}
+                                    />
                                 </div>
                                 <div className="col-12 col-sm-6 text-center">
                                     <h1 className="servicesheading fs-4">Running APP</h1>

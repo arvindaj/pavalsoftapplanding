@@ -7,6 +7,7 @@ import img4 from '../assets/img/appscreen2 1.png';
 import icon2 from '../assets/img/skin-cell 1.png';
 import icon3 from '../assets/img/cashback.png';
 import icon4 from '../assets/img/magnifying-glass 1.png';
+import icon5 from '../assets/img/cashback.png';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap 5 CSS
 
 const Features = () => {
@@ -45,19 +46,29 @@ const Features = () => {
 
           {/* Right Section */}
           <div className="col-12 col-lg-6 pt-5 pt-lg-0 position-relative">
-            <h1 className="fw-bold text-dark mb-0 fs-4 fs-md-3">Find the best developers for</h1>
-            <h1 className="fw-bold text-dark fs-4 fs-md-3">Mobile app Development services</h1>
+            <h1 className="text-dark mb-0 fs-5 fs-md-3">Find the best developers for</h1>
+            <h1 className="fw-bold text-dark fs-4 fs-md-3">Mobile app <br />Development services</h1>
             <p className="text-dark fs-6 fs-md-5 my-3">
               Schedule a consultation with our skilled mobile app developers to convey your idea and explore possible solutions that can drive creativity and efficiency in your business.
             </p>
+
+            {/* Icon Mobile Section */}
             <div className="d-flex flex-column gap-3">
               {[
                 { icon: icon2, text: '$10+ Billion Market' },
                 { icon: icon3, text: '3x Player Retention' },
                 { icon: icon4, text: 'New Revenue Streams' },
+                { icon: icon5, text: '100% refund policy' },
               ].map((item, idx) => (
-                <div key={idx} className="d-flex align-items-center gap-2" data-aos="fade-right">
-                  <img src={item.icon} alt="icon" className="img-fluid" style={{ width: '40px', height: '40px' }} />
+                <div key={idx} className="d-flex align-items-center gap-2 icon-wrapper" data-aos="fade-right">
+                  <div className="" >
+                    <img
+                      src={item.icon}
+                      alt="icon"
+                      className="img-fluid"
+                      style={{ width: '40px', height: '40px' }}
+                    />
+                  </div>
                   <h2 className="fw-bold text-dark mb-0 fs-5 fs-md-4">{item.text}</h2>
                 </div>
               ))}
@@ -127,11 +138,20 @@ const Features = () => {
         </div>
       </div>
 
-      {/* Inline CSS for Button Hover */}
+      {/* Inline CSS for Button and Icon Hover */}
       <style jsx>{`
         .btn-dark:hover {
           transform: scale(1.05);
           transition: all 0.2s ease;
+        }
+        .icon-wrapper: {
+        background-color:rgb(131, 197, 39);
+        border-radius: 8px;
+        }
+        .icon-wrapper:hover {
+          background-color: #D5E6BD;
+          border-radius: 8px;
+          
         }
       `}</style>
     </div>

@@ -112,7 +112,9 @@ function TechnologiesPage() {
               Enquire Now
             </button>
             {/* Centered Image in Right Section */}
-            <div className="d-flex justify-content-center mt-5">
+          
+          </div>
+             <div className="d-flex justify-content-center mt-5">
               <img
                 src={img5}
                 alt="Technology visual representation"
@@ -121,7 +123,6 @@ function TechnologiesPage() {
                 data-aos="fade-up"
               />
             </div>
-          </div>
         </div>
       </div>
 

@@ -62,17 +62,18 @@ const MobileappSection = () => {
       <div className="container-fluid">
         {/* Case Study Top */}
         <div className="mb-3">
-          <div className="d-flex flex-row align-items-center justify-content-center  gap-2">
-            <div className='bg-light d-flex flex-row '>
+          <div className="d-flex flex-row gap-3">
+            <div className='d-flex flex-row mx-auto text-start bg-light shadow-sm p-2 gap-3 rounded'>
               <img
                 src={contentSets[currentIndex].icon}
                 alt={contentSets[currentIndex].iconAlt}
-                className="img-fluid bg-light text-start"
+                className="img-fluid bg-light"
                 style={{ width: '40px', height: '40px' }}
               />
               <h1
-                className="fw-bold text-dark fs-4 m-0 bg-light shadow-sm p-2 rounded"
+                className="fw-bold fs-4 m-0  text-start mt-2"
                 data-aos="fade-up"
+                style={{color:'#76AC29'}}
               >
                 {contentSets[currentIndex].heading}
               </h1>
@@ -82,9 +83,12 @@ const MobileappSection = () => {
         </div>
 
         {/* Case Study Bottom */}
+        <div>
+
+        </div>
         <div className="d-flex flex-row align-items-center justify-content-center gap-3 mb-4 mb-md-5">
           <p
-            className="text-dark fs-6 m-0"
+            className="text-dark fs-6 m-0 text-start "
             style={{ maxWidth: '600px' }}
             data-aos="fade-up"
             data-aos-delay="200"
@@ -92,7 +96,7 @@ const MobileappSection = () => {
             {contentSets[currentIndex].para}
           </p>
           <button
-            className="btn btn-outline-dark px-4 py-2 btn-success"
+            className="btn btn-outline-dark px-1 py-4 btn-success"
             onClick={handleArrowClick}
             aria-label="Next content"
             title="View next service"
@@ -102,7 +106,7 @@ const MobileappSection = () => {
         </div>
 
         {/* Icons Section */}
-        <div className="d-flex flex-column gap-3 mx-auto text-start" style={{ maxWidth: '600px' }}>
+        <div className="d-flex flex-column gap-3 mx-auto text-start bg-light shadow-sm p-2 gap-3 rounded" style={{ maxWidth: '600px' }}>
           {[
             { icon: icon3, text: 'React App Development' },
             { icon: icon2, text: 'iOS App Development' },
