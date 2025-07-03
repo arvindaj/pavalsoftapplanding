@@ -1,32 +1,146 @@
-   .btn-dark:hover {
-          transform: scale(1.05);
-          transition: transform 0.2s ease;
-        }
-        @media (min-width: 2560px) {
-          h1.fs-2 {
-            font-size: 3.5rem !important;
-          }
-          p.fs-5 {
-            font-size: 1.75rem !important;
-          }
-          h2.fs-4 {
-            font-size: 2rem !important;
-          }
-          p.fs-6 {
-            font-size: 1.25rem !important;
-          }
-          .btn-dark {
-            font-size: 1.5rem !important;
-            padding: 0.75rem 2.5rem !important;
-          }
-          img[alt="User-friendly mobile app interface"] {
-            max-height: 60vh !important;
-          }
-          img[alt="Technology visual representation"] {
-            max-width: 80% !important;
-          }
-            .container {
-            max-width: 2100px !important;
-          }
-          
-        }
+/* ========== Wrapper to allow relative control ========== */
+.tech-img-wrapper {
+  min-height: 500px;
+}
+
+/* ========== Desktop styles (≥992px) ========== */
+@media (min-width: 992px) {
+  .tech-img-wrapper {
+    position: relative;
+  }
+
+  .tech-img4 {
+    position: absolute;
+    left: -15%;
+    top: 0;
+    z-index: 1;
+    max-height: 100%;
+  }
+
+  .tech-img6 {
+    position: absolute;
+    left: -32%;
+    top: -6%;
+    z-index: 2;
+    transform: scale(0.5);
+    scale: 0.7;
+    opacity: 0.6;
+  }
+
+  .tech-img7 {
+    position: absolute;
+    left: -23%;
+    top: 100%;
+    width: 10%;
+    z-index: 0;
+  }
+}
+
+/* ========== Mobile styles (≤520px, incl. 320px) ========== */
+@media (max-width: 520px) {
+  .tech-img4,
+  .tech-img6,
+  .tech-img7 {
+    position: relative !important;
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tech-img4 {
+    max-width: 85% !important;
+    margin-bottom: 10px;
+  }
+
+  .tech-img6 {
+    max-width: 70% !important;
+    transform: scale(0.6) !important;
+    margin-bottom: 10px;
+  }
+
+  .tech-img7 {
+    width: 45px !important;
+    margin-top: 10px;
+  }
+}
+
+/* ========== Specific 320px override (optional) ========== */
+@media (max-width: 360px) {
+  .tech-img6 {
+    transform: scale(0.5) !important;
+  }
+
+  .tech-img7 {
+    width: 40px !important;
+  }
+}
+
+/* ========== Hide tech-img6 and tech-img7 below 1024px ========== */
+@media (max-width: 1023.98px) {
+  .tech-img6,
+  .tech-img7 {
+    display: none !important;
+  }
+}
+
+
+/* ========== Show background image above 1024px ========== */
+@media (min-width: 1024px) {
+  .bg-tech-img {
+    display: block;
+    height: 100%;
+  }
+
+  .bg-tech-img img {
+    object-fit: cover;
+    transform: translateY(-20%);
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .real-time-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+/* Default: visible and centered on mobile */
+.real-time-text {
+  margin-top: 1rem;
+  z-index: 3;
+}
+
+/* Large screen (≥1024px): absolutely position below image */
+@media (min-width: 1024px) {
+  .tech-img-wrapper {
+    position: relative;
+  }
+
+  .real-time-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 3;
+    /* background: rgba(255, 255, 255, 0.7); optional: improves visibility */
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+}
+
+
+/* Hover box styling */
+.tech-hover-box {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* background-color: #ffffff; */
+}
+
+.tech-hover-box:hover {
+  background-color: #f2f2f2; /* light gray background on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}

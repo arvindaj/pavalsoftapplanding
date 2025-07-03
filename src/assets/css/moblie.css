@@ -1,0 +1,42 @@
+
+  
+    .btn-outline-dark:hover {
+      transform: scale(1.05);
+      transition: all 0.2s ease;
+    }
+
+    .btn-success {
+      background-color: rgb(47, 200, 8);
+      border-color: rgb(10, 114, 35);
+    }
+
+    .case-study-hover {
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease;
+    }
+
+    .case-study-hover:hover {
+      background-color: #e3f7e3; /* light green on hover */
+      cursor: pointer;
+    }
+  
+ .btn-outline-dark:hover {
+      transform: scale(1.05);
+      transition: all 0.2s ease;
+    }
+
+    .btn-success {
+      background-color: rgb(47, 200, 8);
+      border-color: rgb(10, 114, 35);
+    }
+
+    .case-study-hover {
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .case-study-hover:hover {
+      background-color: #e3f7e3;
+      transform: translateY(-3px);
+    }

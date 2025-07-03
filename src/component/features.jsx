@@ -8,7 +8,9 @@ import icon2 from '../assets/img/skin-cell 1.png';
 import icon3 from '../assets/img/cashback.png';
 import icon4 from '../assets/img/magnifying-glass 1.png';
 import icon5 from '../assets/img/cashback.png';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap 5 CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; // 
+//Bootstrap 5 CSS
+import '../assets/css/features.css'
 
 const Features = () => {
   useEffect(() => {
@@ -36,10 +38,10 @@ const Features = () => {
               src={img4}
               alt="app screen"
               className="img-fluid"
-              style={{ maxWidth: '90%', transform: 'scale(0.8)' }}
+              style={{ maxWidth: '90%', transform: 'scale(0.9)' }}
               data-aos="fade-right"
             />
-            <p className="bottom-0 mb-0 d-none d-sm-block text-center fs-6 text-dark">
+            <p className="bottom-0 mb-2 d-none d-sm-block text-center fs-6 text-dark">
               User Friendly APP
             </p>
           </div>
@@ -53,7 +55,7 @@ const Features = () => {
             </p>
 
             {/* Icon Mobile Section */}
-            <div className="d-flex flex-column gap-3">
+            <div className="d-flex flex-column gap-4 ">
               {[
                 { icon: icon2, text: '$10+ Billion Market' },
                 { icon: icon3, text: '3x Player Retention' },
@@ -91,19 +93,21 @@ const Features = () => {
       >
         <div className="row align-items-center g-4">
           {/* Stats Left */}
-          <div className="col-12 col-lg-4 text-center text-lg-start">
+          <div className="col-12 col-lg-3 text-center text-lg-start">
             <h4 className="fw-bold text-dark fs-4 fs-lg-3 mb-0">
-              Ready to Transform <br /> Your Online Presence?
+              Ready to  <br />Transform <br /> Your Online  <br /> Presence?
             </h4>
           </div>
 
           {/* Stats Separator */}
           <div className="d-none d-lg-block col-lg-1">
             <div className="bg-secondary h-100" style={{ width: '2px', margin: 'auto' }}></div>
+            <div className="line4"></div>
           </div>
 
+ 
           {/* Stats Right */}
-          <div className="col-12 col-lg-7 position-relative p-3 p-lg-4">
+          <div className="col-12 col-lg-6 position-relative p-3 p-lg-4">
             <div
               className="position-absolute rounded-circle d-none d-lg-block"
               style={{
@@ -115,7 +119,10 @@ const Features = () => {
                 zIndex: -1,
               }}
             ></div>
-            <p className="text-dark fs-6 fs-md-5 mb-4">
+
+           
+
+            <p className="text-dark fs-6 fs-md-5 mb-4 col-lg-12">
               Our team is here to provide you with tailored solutions that will elevate your brand and engage your audience.
             </p>
             <div className="row g-3">

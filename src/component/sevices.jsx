@@ -1,7 +1,7 @@
 import React from 'react';
-// import '../assets/css/services.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import icon4 from "../assets/img/sevicesoftware.png";
+import '../assets/css/sevices.css'
 
 function Services() {
     return (
@@ -15,37 +15,44 @@ function Services() {
 
             <div className="py-4">
                 <div className="container">
-                    <div className="row align-items-center">
-                        {/* Left Column */}
-                        <div className="col-12 col-md-6 text-center text-md-start  mb-md-0 mb-lg-4 " style={{backgroundColor:'#EAEAEA99'}}>
-                            <h1 className="servicesheading mb-5 fs-4 ">
-                                Software Product Development
-                            </h1>
-                            <p className="">
+                    <div className="row g-0 shadow rounded overflow-hidden" style={{ backgroundColor: '#EAEAEA99' }}>
+                        {/* Left Side */}
+                        <div className="col-12 col-md-6 p-4 text-start">
+                            <h5 className="fw-bold mb-3">Software Product Development</h5>
+                            <hr style={{ width: '60px', borderTop: '2px solid black' }} />
+                            <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                                 As a top software development company, we help businesses drive growth and thrive in a competitive landscape with innovative software solutions. Whether you're a startup seeking dynamic software, a growing enterprise needing an integrated digital ecosystem, or a corporation looking to modernize legacy software, our custom software development services cater to all unique business needs.
                             </p>
+
                         </div>
-                        {/* Right Column */}
-                        <div className="col-12 col-md-6 text-center text-md-center " style={
-                            {backgroundColor:'#EAEAEA99'}
-                        }>
-                            <div className="d-flex justify-content-center justify-content-md-center flex-wrap gap-2 ">
-                                <button className="btn btn-dark me-md-2">
-                                    Explore Now <i className="fa-solid fa-arrow-right-long ms-2"></i>
+
+                        {/* Right Side */}
+                        <div className="col-12 col-md-6 position-relative bg-white d-flex flex-column justify-content-between p-3">
+                            {/* Top Right Button */}
+                            <div className="d-flex justify-content-center mb-3 gap-3">
+                                <button className="btn custom-btn">
+                                    Explore Now <i className="fa fa-arrow-right ms-2"></i>
                                 </button>
-                                <button className="btn btn-outline-dark">
-                                    Go Next <i className="fa-solid fa-arrow-right-long ms-2"></i>
+                                <button className="btn custom-btn">
+                                    Go Next <i className="fa fa-arrow-right ms-2"></i>
                                 </button>
                             </div>
-                            <div className="row align-items-center bg-light ">
-                                <div className="col-12 col-sm-6 text-center">
-                                    <img src={icon4} alt="Software Development" className="img-fluid" data-aos="fade-right" style={{
-                                        scale:'0.9'
-                                    }}
-                                    />
-                                </div>
-                                <div className="col-12 col-sm-6 text-center">
-                                    <h1 className="servicesheading fs-4">Running APP</h1>
+
+                            {/* App Image and Label */}
+                            <div className="d-flex align-items-center justify-content-center bg-light rounded p-3 h-100" >
+                                <div className="row w-100">
+                                    <div className="col-6 text-center">
+                                        <img
+                                            src={icon4}
+                                            alt="App Mockup"
+                                            className="img-fluid"
+                                            style={{ maxHeight: '350px', scale: '1' }}
+                                        />
+                                    </div>
+                                    <div className="col-6 d-flex flex-column justify-content-center align-items-start text-start ps-3">
+                                        <h6 className="fw-bold mb-1">Running APP</h6>
+                                        <span style={{ letterSpacing: '5px', color: '#888' }}>SUCCESS</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

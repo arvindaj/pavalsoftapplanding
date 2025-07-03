@@ -34,6 +34,8 @@ const ContactSection = () => {
                     >
                         Contact us Today
                     </button>
+
+                    
                     <div className="social-icons d-flex gap-3 mt-3">
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                             <i className="bi bi-instagram" style={{ color: 'black', fontSize: '1.5rem' }}></i>

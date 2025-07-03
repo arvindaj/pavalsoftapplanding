@@ -1,0 +1,6 @@
+.line4 {
+    width: 3px !important;
+    height: 110px;
+    background: linear-gradient(to bottom, #545252); /* Example gradient */
+    margin: 0 10px;
+}

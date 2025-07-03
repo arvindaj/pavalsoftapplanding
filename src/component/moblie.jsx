@@ -7,6 +7,8 @@ import icon2 from '../assets/img/ios.png';
 import icon3 from '../assets/img/reacticon 1.png';
 import icon4 from '../assets/img/webicon.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../assets/css/moblie.css'
+
 
 const MobileappSection = () => {
   const contentSets = [
@@ -60,74 +62,92 @@ const MobileappSection = () => {
 
       {/* Case Study Section */}
       <div className="container-fluid">
+
         {/* Case Study Top */}
         <div className="mb-3">
-          <div className="d-flex flex-row gap-3">
-            <div className='d-flex flex-row mx-auto text-start bg-light shadow-sm p-2 gap-3 rounded'>
+          <div className="d-flex flex-row justify-content-center">
+            <div
+              className="d-flex align-items-center gap-3 px-3 py-2 rounded shadow-sm case-study-top-box"
+              style={{
+                backgroundColor: '#f4fef0',
+                maxWidth: '800px',
+                width: '100%',
+              }}
+            >
               <img
                 src={contentSets[currentIndex].icon}
                 alt={contentSets[currentIndex].iconAlt}
-                className="img-fluid bg-light"
+                className="img-fluid"
                 style={{ width: '40px', height: '40px' }}
               />
-              <h1
-                className="fw-bold fs-4 m-0  text-start mt-2"
+              <h4
+                className="fw-bold m-0 text-start"
                 data-aos="fade-up"
-                style={{color:'#76AC29'}}
+                style={{ color: '#49a825' }}
               >
                 {contentSets[currentIndex].heading}
-              </h1>
+              </h4>
             </div>
-
           </div>
         </div>
 
         {/* Case Study Bottom */}
-        <div>
-
-        </div>
-        <div className="d-flex flex-row align-items-center justify-content-center gap-3 mb-4 mb-md-5">
-          <p
-            className="text-dark fs-6 m-0 text-start "
-            style={{ maxWidth: '600px' }}
-            data-aos="fade-up"
-            data-aos-delay="200"
+        <div className="container mb-5">
+          <div
+            className="d-flex flex-row align-items-start justify-content-between gap-3"
+            style={{ maxWidth: '800px', margin: '0 auto' }}
           >
-            {contentSets[currentIndex].para}
-          </p>
-          <button
-            className="btn btn-outline-dark px-1 py-4 btn-success"
-            onClick={handleArrowClick}
-            aria-label="Next content"
-            title="View next service"
-          >
-            <i className="fa-solid fa-arrow-down-long "></i>
-          </button>
+            <p
+              className="text-dark fs-6 text-start mb-0"
+              style={{ lineHeight: '1.8', flex: 1 }}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Utilizing modern Android app development programming languages and tools like Kotlin, Java, and Jetpack Compose, we help businesses revamp, maintain, or create their custom Android apps from the ground up. So, they get the best-in-class app development solution, supporting their business functions. With expertise in the app development, Hire Android developers from us to build apps for multiple Android Devices.
+            </p>
+            <button
+              className="btn btn-outline-dark btn-success d-flex align-items-center justify-content-center"
+              onClick={handleArrowClick}
+              aria-label="Next content"
+              title="View next service"
+              style={{ width: '44px', height: '44px', minWidth: '44px' }}
+            >
+              <i className="fa-solid fa-arrow-down-long text-white"></i>
+            </button>
+          </div>
         </div>
 
-        {/* Icons Section */}
-        <div className="d-flex flex-column gap-3 mx-auto text-start bg-light shadow-sm p-2 gap-3 rounded" style={{ maxWidth: '600px' }}>
+        {/* Icons List */}
+        <div className="container"  style={{ maxWidth: '800px', margin: '0 auto' }}>
           {[
-            { icon: icon3, text: 'React App Development' },
             { icon: icon2, text: 'iOS App Development' },
+            { icon: icon3, text: 'React App Development' },
             { icon: icon1, text: 'Flutter App Development' },
             { icon: icon4, text: 'Cross-Platform App Development' },
-          ].map((item) => (
+            {
+              icon: icon4,
+              text: 'Progressive Web App Development',
+            },
+          ].map((item, index) => (
             <div
-              key={item.text}
-              className="d-flex flex-row align-items-center gap-2 justify-content-start"
+              key={index}
+              className="case-icon-row d-flex align-items-center gap-3 bg-light rounded px-3 py-2 shadow-sm mb-3"
               data-aos="fade-right"
+              data-aos-delay={index * 100}
             >
               <img
                 src={item.icon}
                 alt={item.text}
-                className="img-fluid bg-light"
-                style={{ width: '40px', height: '40px' }}
+                className="img-fluid"
+                style={{ width: '36px', height: '36px' }}
               />
-              <h2 className="fw-bold text-dark mb-0 fs-5">{item.text}</h2>
+              <h5 className="fw-bold text-dark mb-0">{item.text}</h5>
             </div>
           ))}
         </div>
+
+
+
       </div>
 
       {/* Inline CSS */}

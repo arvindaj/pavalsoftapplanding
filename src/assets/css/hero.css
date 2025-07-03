@@ -1,6 +1,7 @@
 /* General Styles */
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif, 
+'Libre-Franklin';
 }
 
 .btn-dark:hover {
@@ -79,6 +80,8 @@
     background: linear-gradient(to bottom, #545252); /* Example gradient */
     margin: 0 10px;
 }
+
+
 
 .position-absolute.d-none.d-xl-block {
   top: 65%;
