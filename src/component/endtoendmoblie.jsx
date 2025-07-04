@@ -110,7 +110,7 @@ const Endtoendmoblie = () => {
                 className="case-study-card position-relative p-0"
                 data-aos="fade-up"
                 data-aos-duration={1000 + index * 500}
-                onClick={() => setShowPopup(true)} // Optional: Trigger popup on card click
+               // Optional: Trigger popup on card click
               >
                 <div className="card-bg">
                   <div className="card-badge">

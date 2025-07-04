@@ -56,7 +56,6 @@ function TechnologiesPage() {
           </div>
 
 
-
           {/* Right Content */}
           <div className="col-12 col-lg-6">
             <div className="d-flex flex-column gap-4">
