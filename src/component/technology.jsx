@@ -87,7 +87,7 @@ function TechnologiesPage() {
                   data-aos="fade-right"
                   data-aos-delay={index * 100}
                 >
-                  <img src={item.icon} alt={item.title} className="img-fluid" style={{ width: '48px', height: '48px' }} />
+                  <img src={item.icon} alt={item.title} className="img-fluid mt-3" style={{ width: '48px', height: '48px' }} />
                   <div className="text-start">
                     <h5 className="fw-bold text-dark mb-2">{item.title}</h5>
                     <p className="text-dark mb-0">{item.text}</p>
@@ -103,6 +103,7 @@ function TechnologiesPage() {
 
           {/* Bottom Image */}
           <div className="col-12 text-center mt-5">
+
             <img
               src={img5}
               alt="Technology visual"
@@ -111,6 +112,12 @@ function TechnologiesPage() {
               data-aos="fade-up"
             />
           </div>
+
+          <h1 className="end-to-end-heading fw-bold">
+            Our <span className="highlight-yellow">End-to-End</span> Mobile App <br />
+            Development Services
+          </h1>
+
         </div>
       </div>
     </div>

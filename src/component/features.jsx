@@ -48,10 +48,10 @@ const Features = () => {
 
           {/* Right Section */}
           <div className="col-12 col-lg-6 pt-5 pt-lg-0 position-relative p-4">
-            <h1 className="text-dark mb-0 fs-5 fs-md-3">Find the best developers for</h1>
+            <h1 className="text-dark mb-0 fs-5 fs-md-2 mb-2">Find the best developers for</h1>
 
             <h1 className="fw-bold text-dark fs-4 fs-md-3">Mobile app <br />Development services</h1>
-            <p className="text-dark fs-6 fs-md-5 my-3">
+            <p className="text-dark fs-5 fs-md-5 my-3">
               Schedule a consultation with our skilled mobile app developers to convey your idea and explore possible solutions that can drive creativity and efficiency in your business.
             </p>
 

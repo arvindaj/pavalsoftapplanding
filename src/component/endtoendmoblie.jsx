@@ -114,11 +114,12 @@ const Endtoendmoblie = () => {
               >
                 <div className="card-bg">
                   <div className="card-badge">
-                    <img src={study.icon} alt={study.alt} className="badge-img" />
+                    <img src={study.icon} alt={study.alt} className="badge-img mb-1" />
                   </div>
                 </div>
                 <div className="card-text">
-                  <h1 dangerouslySetInnerHTML={{ __html: study.title }} />
+                  <h1 className='mb-3'
+                  dangerouslySetInnerHTML={{ __html: study.title }} />
                   <p>{study.description}</p>
                 </div>
               </div>

@@ -98,7 +98,7 @@ const MobileappSection = () => {
             style={{ maxWidth: '800px', margin: '0 auto' }}
           >
             <p
-              className="text-dark fs-6 text-start mb-0"
+              className="text-dark fs-6 text-start mb-0 mx-2"
               style={{ lineHeight: '1.8', flex: 1 }}
               data-aos="fade-up"
               data-aos-delay="200"
@@ -106,11 +106,11 @@ const MobileappSection = () => {
              {contentSets[currentIndex].para}
             </p>
             <button
-              className="btn btn-outline-dark btn-success d-flex align-items-center justify-content-center"
+              className="btn btn-outline-dark  d-flex align-items-center justify-content-center"
               onClick={handleArrowClick}
               aria-label="Next content"
               title="View next service"
-              style={{ width: '44px', height: '44px', minWidth: '44px' }}
+              style={{ width: '44px', height: '54px', minWidth: '44px' ,backgroundColor:'#76AC29', borderRadius:'15px' }}
             >
               <i className="fa-solid fa-arrow-down-long text-white"></i>
             </button>

@@ -41,18 +41,18 @@ function Services() {
                             </div>
 
                             {/* App Image and Label */}
-                            <div className="d-flex align-items-center justify-content-center bg-light rounded p-3 h-100" >
-                                <div className="row w-100">
-                                    <div className="col-6 text-center">
+                            <div className="d-flex align-items-center justify-content-center rounded h-100" >
+                                <div className="row w-100 ">
+                                    <div className="col-6 text-center h-100">
                                         <img
                                             src={icon4}
                                             alt="App Mockup"
-                                            className="img-fluid"
-                                            style={{ maxHeight: '350px', scale: '1' }}
+                                            className="img-fluid position-relative "
+                                            style={{ maxHeight: '350px', scale: '1.06' }}
                                         />
                                     </div>
-                                    <div className="col-6 d-flex flex-column justify-content-center align-items-start text-start ps-3">
-                                        <h6 className="fw-bold mb-1">Running APP</h6>
+                                    <div className="col-6 d-flex flex-column justify-content-center align-items-center text-center ps-3 bg-light ">
+                                        <h6 className="fw-bold mb-3">Running APP</h6>
                                         <span style={{ letterSpacing: '5px', color: '#888' }}>SUCCESS</span>
                                     </div>
                                 </div>
