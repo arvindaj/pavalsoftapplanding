@@ -8,14 +8,14 @@ import Endtoendmoblie from './endtoendmoblie';
 
 
 const ContactSection = () => {
- 
+
     return (
         <div className="contact-wrapper">
 
             <div className="bg-wrapper">
                 <img src={bg} alt="Background" className="bg-img" />
             </div>
-            <Endtoendmoblie/>
+            <Endtoendmoblie />
             <div className="contact-top d-flex">
                 <div className="contact-top-left pt-0 pb-0 p-3 p-lg-0 p-md-0">
                     <h2 className="contact-heading">Our Successful Mobile App Development Projects</h2>
@@ -24,33 +24,17 @@ const ContactSection = () => {
                         today for a free consultation! Our expert team specializes in creating
                         innovative mobile applications tailored to your business needs.
                     </p>
-                    <p className="btn-outline-black text-black p-2">
-                        Get started with your dream app today!
-                    </p>
+
                     <button
                         className="btn bg-black text-white contact-button"
                         onClick={() => setShowPopup(true)}
                         aria-label="Contact us for a free consultation"
                     >
-                        Contact us Today
+                        Explore Now
                     </button>
-
                     
-                    <div className="social-icons d-flex gap-3 mt-3">
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
-                            <i className="bi bi-instagram" style={{ color: 'black', fontSize: '1.5rem' }}></i>
-                        </a>
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
-                            <i className="bi bi-facebook" style={{ color: 'black', fontSize: '1.5rem' }}></i>
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
-                            <i className="bi bi-twitter-x" style={{ color: 'black', fontSize: '1.5rem' }}></i>
-                        </a>
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
-                            <i className="bi bi-youtube" style={{ color: 'black', fontSize: '1.5rem' }}></i>
-                        </a>
-                    </div>
                 </div>
+
                 <div className="contact-top-right d-flex flex-column align-items-center justify-content-center gap-3 flex-md-row">
                     <img
                         src={img3}
@@ -68,6 +52,7 @@ const ContactSection = () => {
                                 UI/UX
                             </button>
                         </div>
+
                         <div>
                             <button
                                 className="btn contact-button"
@@ -78,6 +63,7 @@ const ContactSection = () => {
                                 Mobile App
                             </button>
                         </div>
+
                         <div>
                             <button
                                 className="btn contact-button btn-outline-black mb-2 mb-lg-0"
@@ -89,11 +75,32 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="passio-text-box  d-flex flex-wrap  flex-column position-relative">
+                    <p className="passio-text m-0">
+                        Passio.AI is an edge-AI platform that empowers businesses to add vertical-specific computer vision into their apps and deliver AI-driven lifestyle experiences.
+                    </p>
+                    <div className="social-icons  d-flex gap-3 mt-3">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <i className="bi bi-instagram" style={{ color: 'black', fontSize: '1.5rem' }}></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                            <i className="bi bi-facebook" style={{ color: 'black', fontSize: '1.5rem' }}></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                            <i className="bi bi-twitter-x" style={{ color: 'black', fontSize: '1.5rem' }}></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
+                            <i className="bi bi-youtube" style={{ color: 'black', fontSize: '1.5rem' }}></i>
+                        </a>
+                    </div>
+                </div>   
+
             </div>
 
             <div className="contact-bottom pt-0 pb-0 p-3 p-lg-0 p-md-0">
                 <h3 className="bottom-heading">
-                    We specialize in delivering digital marketing solutions that drive
+                    We specialize in delivering digital marketing solutions <br /> that drive
                     growth and success.
                 </h3>
                 <p className="bottom-para">
@@ -113,7 +120,7 @@ const ContactSection = () => {
                 </button>
 
             </div>
-           
+
             <style>
                 {`
           .btn-success:hover, .contact-button[style*="background-color: black"]:hover {
