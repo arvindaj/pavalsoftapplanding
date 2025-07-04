@@ -15,7 +15,8 @@ function Services() {
 
             <div className="py-4">
                 <div className="container">
-                    <div className="row g-0 shadow rounded overflow-hidden" style={{ backgroundColor: '#EAEAEA99' }}>
+                    <div className="row g-0 shadow rounded overflow-hidden"
+                     style={{ backgroundColor: '#EAEAEA99' }}>
                         {/* Left Side */}
                         <div className="col-12 col-md-6 p-4 text-start">
                             <h5 className="fw-bold mb-3">Software Product Development</h5>
@@ -27,7 +28,8 @@ function Services() {
                         </div>
 
                         {/* Right Side */}
-                        <div className="col-12 col-md-6 position-relative bg-white d-flex flex-column justify-content-between p-3">
+                        <div className="col-12 col-md-6 position-relative d-flex flex-column justify-content-between p-3"
+                         >
                             {/* Top Right Button */}
                             <div className="d-flex justify-content-center mb-3 gap-3">
                                 <button className="btn custom-btn">
