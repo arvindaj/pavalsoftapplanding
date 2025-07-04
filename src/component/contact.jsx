@@ -16,6 +16,13 @@ const ContactSection = () => {
                 <img src={bg} alt="Background" className="bg-img" />
             </div>
             <Endtoendmoblie />
+
+            <img
+                src={img3}
+                alt="Mobile app mockup"
+                className="girl-img position-absolute"
+                data-aos="fade-left"
+            />
             <div className="contact-top d-flex">
                 <div className="contact-top-left pt-0 pb-0 p-3 p-lg-0 p-md-0">
                     <h2 className="contact-heading">Our Successful Mobile App Development Projects</h2>
@@ -32,18 +39,13 @@ const ContactSection = () => {
                     >
                         Explore Now
                     </button>
-                    
+
                 </div>
 
-                <div className="contact-top-right d-flex flex-column align-items-center justify-content-center gap-3 flex-md-row">
-                    <img
-                        src={img3}
-                        alt="Mobile app mockup"
-                        className="girl-img"
-                        data-aos="fade-left"
-                    />
-                    <div className="d-flex flex-column gap-2 justify-content-start">
-                        <div className="">
+                <div className="contact-top-right d-flex  justify-content-end">
+
+                    <div className="d-flex flex-column gap-4 ">
+                        <div className="justify-content-start d-flex">
                             <button
                                 className="btn contact-button btn-outline-black"
                                 onClick={() => setShowPopup(true)}
@@ -53,9 +55,9 @@ const ContactSection = () => {
                             </button>
                         </div>
 
-                        <div>
+                        <div className='justify-content-start d-flex'>
                             <button
-                                className="btn contact-button"
+                                className="btn contact-button ms-2"
                                 style={{ backgroundColor: 'black', color: 'white', borderColor: 'black' }}
                                 onClick={() => setShowPopup(true)}
                                 aria-label="Explore Mobile App services"
@@ -66,7 +68,7 @@ const ContactSection = () => {
 
                         <div>
                             <button
-                                className="btn contact-button btn-outline-black mb-2 mb-lg-0"
+                                className="btn contact-button btn-outline-black mb-2 mb-lg-0 ms-3"
                                 onClick={() => setShowPopup(true)}
                                 aria-label="Explore Data & AI/ML services"
                             >
@@ -76,11 +78,14 @@ const ContactSection = () => {
                     </div>
                 </div>
 
-                <div className="passio-text-box  d-flex flex-wrap  flex-column position-relative">
-                    <p className="passio-text m-0">
-                        Passio.AI is an edge-AI platform that empowers businesses to add vertical-specific computer vision into their apps and deliver AI-driven lifestyle experiences.
-                    </p>
-                    <div className="social-icons  d-flex gap-3 mt-3">
+                <div className=" mt-5  d-flex flex-wrap  flex-column position-relative">
+                    <div className='passio-text-box '>
+                        <p className="passio-text p-4">
+                            Passio.AI is an edge-AI platform that empowers businesses to add vertical-specific computer vision into their apps and deliver AI-driven lifestyle experiences.
+                        </p>
+                    </div>
+
+                    <div className="social-icons  d-flex gap-3 mt-3 p-3">
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                             <i className="bi bi-instagram" style={{ color: 'black', fontSize: '1.5rem' }}></i>
                         </a>
@@ -94,7 +99,7 @@ const ContactSection = () => {
                             <i className="bi bi-youtube" style={{ color: 'black', fontSize: '1.5rem' }}></i>
                         </a>
                     </div>
-                </div>   
+                </div>
 
             </div>
 
