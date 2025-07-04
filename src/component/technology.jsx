@@ -46,10 +46,10 @@ function TechnologiesPage() {
 
           {/* Left Image Section */}
           <div className="col-12 col-lg-6 d-flex flex-column align-items-center position-relative tech-img-wrapper">
-            <img src={img4} alt="Phone frame" className="img-fluid tech-img4" data-aos="fade-right" />
+            <img src={img4} alt="Phone frame" className="img-fluid tech-img4 p-2" data-aos="fade-right" />
             <img src={img6} alt="User interacting" className="img-fluid tech-img6" data-aos="fade-up" />
             <img src={img7} alt="Decorative background" className="img-fluid tech-img7" data-aos="fade-in" />
-            <p className="real-time-text text-dark fs-6 fw-medium text-center">
+            <p className="real-time-text text-dark fs-6 fw-medium text-center ">
               Real Time Experience
             </p>
 

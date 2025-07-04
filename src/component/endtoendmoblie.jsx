@@ -86,8 +86,8 @@ const Endtoendmoblie = () => {
   ];
 
   return (
-    <div className="case-study-section text-center">
-      <div className="case-study-top-section">
+    <div className="case-study-section text-center p-0">
+      <div className="case-study-top-section p-0 m-0">
         {/* Swiper Slider */}
         <Swiper
           modules={[ Autoplay]}
@@ -107,7 +107,7 @@ const Endtoendmoblie = () => {
           {caseStudies.map((study, index) => (
             <SwiperSlide key={index}>
               <div
-                className="case-study-card position-relative"
+                className="case-study-card position-relative p-0"
                 data-aos="fade-up"
                 data-aos-duration={1000 + index * 500}
                 onClick={() => setShowPopup(true)} // Optional: Trigger popup on card click

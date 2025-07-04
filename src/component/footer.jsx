@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div className="col-12 col-md-7 col-lg-8 pt-3 pt-md-4 pt-lg-4">
+          <div className="col-12 col-md-7 col-lg-8 pt-3 pt-md-4 pt-lg-4 p-4">
             <h1 className="fw-bold text-dark fs-5 fs-md-4 ">
               Services
             </h1>

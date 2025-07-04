@@ -1,6 +1,6 @@
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Explicitly include Bootstrap Icons
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../assets/css/contact.css';
 import bg from '../assets/img/bg.png';
 import img3 from '../assets/img/appscreen3 1.png';
@@ -23,8 +23,8 @@ const ContactSection = () => {
                 className="girl-img position-absolute"
                 data-aos="fade-left"
             />
-            <div className="contact-top d-flex">
-                <div className="contact-top-left pt-0 pb-0 p-3 p-lg-0 p-md-0">
+            <div className="row contact-top">
+                <div className="col-12 col-md-6 contact-top-left">
                     <h2 className="contact-heading">Our Successful Mobile App Development Projects</h2>
                     <p className="contact-para">
                         Ready to transform your ideas into powerful mobile apps? Contact us
@@ -44,7 +44,8 @@ const ContactSection = () => {
 
                 <div className="contact-top-right d-flex  justify-content-end">
 
-                    <div className="d-flex flex-column gap-4 ">
+                    <div className="d-flex flex-column gap-4 p-3">
+
                         <div className="justify-content-start d-flex">
                             <button
                                 className="btn contact-button btn-outline-black"
@@ -78,9 +79,9 @@ const ContactSection = () => {
                     </div>
                 </div>
 
-                <div className=" mt-5  d-flex flex-wrap  flex-column position-relative">
+                <div className="d-flex flex-wrap  flex-column position-relative mt-lg-5">
                     <div className='passio-text-box '>
-                        <p className="passio-text p-4">
+                        <p className="passio-text p-3">
                             Passio.AI is an edge-AI platform that empowers businesses to add vertical-specific computer vision into their apps and deliver AI-driven lifestyle experiences.
                         </p>
                     </div>
@@ -126,36 +127,8 @@ const ContactSection = () => {
 
             </div>
 
-            <style>
-                {`
-          .btn-success:hover, .contact-button[style*="background-color: black"]:hover {
-            transform: scale(1.05);
-            transition: all 0.2s ease;
-          }
-          .btn-outline-success {
-            border: 2px solid #28a745; /* Green border for UI/UX and Data & AI/ML */
-          }
-          .btn-outline-success:hover {
-            background-color: #28a745; /* Full green background on hover */
-            color: white;
-          }
-          .btn-outline-black {
-            background-color: rgb(236, 241, 237); /* Light background */
-            color: black;
-          }
-          .bg-black {
-            background-color: black;
-          }
-          .social-icons i {
-            color: black; /* Ensure icons are black */
-          }
-          .social-icons i:hover {
-            color: #555; /* Slightly lighter shade on hover */
-            transform: scale(1.1);
-            transition: all 0.2s ease;
-          }
-        `}
-            </style>
+
+            
         </div>
     );
 };

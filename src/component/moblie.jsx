@@ -103,7 +103,7 @@ const MobileappSection = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Utilizing modern Android app development programming languages and tools like Kotlin, Java, and Jetpack Compose, we help businesses revamp, maintain, or create their custom Android apps from the ground up. So, they get the best-in-class app development solution, supporting their business functions. With expertise in the app development, Hire Android developers from us to build apps for multiple Android Devices.
+             {contentSets[currentIndex].para}
             </p>
             <button
               className="btn btn-outline-dark btn-success d-flex align-items-center justify-content-center"
