@@ -75,8 +75,8 @@ const HeroSection = () => {
 
           <div className="ms-auto text-start col-lg-4 mb-lg-5">
             <div className="d-flex flex-wrap gap-1 gap-sm-2 mb-1 mb-sm-2 align-items-start justify-content-start">
-              <span className="text-dark">Connect with</span>
-              <span className="text-dark">
+              <span className="text-dark hero-text">Connect with</span>
+              <span className="text-dark ">
                 <img src={inFlag} alt="IN" className="me-1" /> +91
               </span>
               <span className="text-dark">
@@ -87,7 +87,7 @@ const HeroSection = () => {
               </span>
             </div>
             <div className="d-flex align-items-center justify-content-start gap-1 gap-sm-2 mb-1 mb-sm-2 col-lg-9 col-md-12">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center hero-text">
                 <img src={email} alt="email" className="me-1" />
                 <span>info@pavalsoftware.com</span>
               </div>

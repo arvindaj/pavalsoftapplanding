@@ -131,7 +131,7 @@ const Features = () => {
                 { end: 51, label: 'Developers' },
                 { end: 452, label: 'Designers' },
                 { end: 785, label: 'Projects' },
-                { end: 100, label: 'Clients', suffix: '%' },
+                { end: 100, label: 'Clients', suffix: '+' },
               ].map((stat, idx) => (
                 <div key={idx} className="col-6 col-md-3 text-center">
                   <div className="fs-3 fw-bold text-dark">

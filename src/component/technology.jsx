@@ -13,7 +13,7 @@ import icon3 from '../assets/img/CLOUD.png';
 import icon4 from '../assets/img/ARVR.png';
 import '../assets/css/technology.css';
 
-function TechnologiesPage() {
+function  TechnologiesPage() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
