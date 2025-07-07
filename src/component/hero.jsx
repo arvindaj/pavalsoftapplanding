@@ -18,7 +18,13 @@ import email from '../assets/img/email.png';
 import r1 from '../assets/img/r1.png';
 import r2 from '../assets/img/r2.png';
 import r3 from '../assets/img/r3.png';
-import contactImg from '../assets/img/hero1 1.png';
+import contactImg from '../assets/img/mine-head.png';
+import contactImgbottom from '../assets/img/bottom-para-baner.png';
+import banerlefthand from '../assets/img/baner-left-hand.png';
+import banerrighttop from '../assets/img/baner-right-top.png';
+import banerlefttoppara from '../assets/img/baner-left-top-para.png';
+import Rectangleempty from '../assets/img/Rectangle-empty.png';
+
 import img1 from '../assets/img/clogo1.png';
 import img2 from '../assets/img/clogo2.png';
 import img3 from '../assets/img/clogo3.png';
@@ -42,8 +48,8 @@ const HeroSection = () => {
 
   const slideData = [
     { text: 'Our team is here to provide you with tailored solutions.' },
-    { text: 'Transform your ideas into reality with our custom mobile app development services.' },
-    { text: 'Boost your digital presence with high-performance apps built using the latest technologies.' },
+    { text: 'Transform your ideas into reality with our custom mobile app.' },
+    { text: 'Boost your digital presence with high-performance apps built.' },
   ];
 
   return (
@@ -98,8 +104,8 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="container py-3 py-sm-4 py-lg-5">
-        <div className="row align-items-center">
+      <div className="container  ">
+        <div className="row align-items-center p-0">
           <div className="col-12 col-lg-6 py-3 py-lg-5">
             <p className="mb-3 mb-sm-4 hero-text">
               MindInventory is a leading Mobile app development service provider in USA and India who have delivered 500+ apps for various Industries. Be it a native mobile app for Android or iOS or cross-platform apps using Flutter and React Native, we have done it all. From MVP to custom application development, we offer end-to-end mobile app development services catering to your varying needs.
@@ -108,11 +114,17 @@ const HeroSection = () => {
           </div>
           <div className="col-12 col-lg-6 text-center mt-3 mt-lg-0">
             <img src={contactImg} alt="Contact Visual" className="img-fluid contact-img" />
+            <img src={contactImgbottom} alt="Contact Visual" className="img-fluid contact-img-bottom-para" />
+            <img src={banerlefthand} alt="Contact Visual" className="img-fluid banerlefthand" />
+            <img src={banerrighttop} alt="Contact Visual" className="img-fluid banerrighttop" />
+             <img src={banerlefttoppara} alt="Contact Visual" className="img-fluid banerlefttoppara" />
+             <img src={Rectangleempty} alt="Contact Visual" className="img-fluid Rectangleemptyleft" />
+            <img src={Rectangleempty} alt="Contact Visual" className="img-fluid Rectangleemptyright"/>
           </div>
 
           {/* Pavalsoft App Revolution */}
           <div className="mb-0 pavalsoft-app">
-            <div className="pavalsoft-app-revolution position-relative">
+            <div className="pavalsoft-app-revolutions">
               <h1 className="text-center fs-1 d-lg-block">
                 Pavalsoft App<br />Revolution
               </h1>
@@ -122,13 +134,13 @@ const HeroSection = () => {
       </div>
 
       {/* Recognized Section */}
-      <div className="container my-3 my-sm-4">
+      <div className="container">
         <div className="d-flex flex-column flex-lg-row align-items-center">
-         <div className="container-fluid px-2 px-sm-3 px-lg-5 py-md-4 col-12 col-lg-6 d-flex flex-row position-relative">
+          <div className="container-fluid px-2 px-sm-3 px-lg-5 py-md-4 col-12 col-lg-6 d-flex flex-row  position-relative">
             <FontAwesomeIcon
               icon={faArrowDownLong}
               onClick={handleNext}
-              className="swiper-nav-icon ms-2"
+              className="swiper-nav-icon ms-2 mt-4 "
               style={{
                 width: '30px',
                 height: '45px',
@@ -145,14 +157,14 @@ const HeroSection = () => {
               loop={true}
               allowTouchMove={true}
               slidesPerView={1}
-              className="trackyour ms-4"
+              className="trackyour ms-4 "
               style={{ height: '100px', overflow: 'hidden' }}
               ref={swiperRef}
             >
               {slideData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="d-flex flex-column justify-content-start align-items-start">
-                    <p className="text-black text-start mb-0 mx-md-4 hero-text">{item.text}</p>
+                    <p className="text-black text-start mt-3 mx-md-4 hero-text">{item.text}</p>
                   </div>
                 </SwiperSlide>
               ))}

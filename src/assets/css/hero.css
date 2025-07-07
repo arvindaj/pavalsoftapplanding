@@ -1,7 +1,7 @@
 /* General Styles */
 .font-poppins {
-  font-family: 'Poppins', sans-serif, 
-'Libre-Franklin';
+  font-family: 'Poppins', sans-serif,
+    'Libre-Franklin';
 }
 
 .btn-dark:hover {
@@ -65,6 +65,7 @@
   bottom: 0;
   left: 0;
 }
+
 .small-line1 {
   width: 2px;
   height: 32px;
@@ -75,10 +76,11 @@
 }
 
 .line3 {
-    width: 4px;
-    height: 40px;
-    background: linear-gradient(to bottom, #545252); /* Example gradient */
-    margin: 0 10px;
+  width: 4px;
+  height: 40px;
+  background: linear-gradient(to bottom, #545252);
+  margin: 0 10px;
+  
 }
 
 
@@ -93,25 +95,58 @@
 }
 
 /* Adjust button icon size */
-  .trackyour p {
-    width: 60%;
-  }
-.pavalsoft-app{
-  height: 0px ;
+.trackyour p {
+  width: 60%;
 }
 
-.pavalsoft-app-revolution {
-  position: relative;
-  top: -80px; /* Adjust as needed for vertical positioning */
-  z-index: 10; /* Ensure it appears above other elements */
+.pavalsoft-app {
+  height: 0px;
 }
 
-.pavalsoft-app-revolution h1 {
-  font-size: 2.5rem; /* Default font size for smaller screens */
+.contact-img-bottom-para {
+  position: absolute;
+  left: 75%;
+  top: 50%;
+}
+
+.banerlefthand {
+  position: absolute;
+  left: 58.3%;
+  top: 35%;
+}
+
+.banerrighttop {
+  position: absolute;
+  left: 75%;
+  top: 20%;
+}
+
+.banerlefttoppara {
+  position: absolute;
+  left: 59.5%;
+  top: 16%;
+}
+
+.Rectangleemptyleft{
+  position: absolute;
+  left: 53.5%;
+  top: 16%;
+}
+.Rectangleemptyright{
+  position: absolute;
+  left: 77.5%;
+  top: 16%;
+}
+
+.pavalsoft-app-revolutions h1 {
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #000000; /* Adjust color as needed */
+  color: #000000;
   line-height: 1.2;
   margin: 0;
+  position: absolute;
+  left: 45%;
+  bottom: 30%;
 }
 
 
@@ -124,35 +159,51 @@
 
 
 
-@media (min-width: 992px) {
-  .pavalsoft-app-revolution h1 {
-    font-size: 3.5rem; /* Larger font size for lg screens */
-    top: -10px; /* Adjust positioning for large screens */
+@media (max-width: 992px) {
+  .pavalsoft-app-revolutions h1 {
+    font-size: 3.5rem;
+
+    bottom: 5%;
+    /* Adjust positioning for large screens */
   }
-  .pavalsoft-app-revolution {
-  position: relative;
-  top: -80px; /* Adjust as needed for vertical positioning */
-  z-index: 10; /* Ensure it appears above other elements */
-}
+
+  .pavalsoft-app-revolutions {
+    top: -0px;
+    z-index: 1;
+  }
 
 }
 
 @media (max-width: 991.98px) {
-  .pavalsoft-app-revolution h1 {
-    font-size: 2rem; /* Smaller font size for non-lg screens */
-    top: -0px; /* Adjust positioning for smaller screens */
+  .pavalsoft-app-revolutions h1 {
+    font-size: 2rem;
+    /* Smaller font size for non-lg screens */
+    top: -0px;
+    /* Adjust positioning for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+
+  .pavalsoft-app-revolutions h1 {
+    position: absolute;
+    left: 35%;
+    bottom: 35%;
+    top: 65%;
   }
 }
 
 @media (min-width: 320px) {
-    .pavalsoft-app-revolution{
+  .pavalsoft-app-revolutions {
     font-size: 2rem;
-    top: 0px ;
+    top: 0px;
+    margin-bottom: 10px;
 
-}
-.pavalsoft-app{
-  height: 50px ;
-}
+  }
+
+  .pavalsoft-app {
+    height: 50px;
+  }
 }
 
 
@@ -160,17 +211,21 @@
 /* Adjust Swiper height for mobile */
 @media (max-width: 767px) {
   .trackyour {
-    width: 100%;/* Slightly taller for mobile readability */
+    width: 100%;
+    /* Slightly taller for mobile readability */
   }
 }
+
 /* Adjust Swiper height for mobile */
 @media (max-width: 320px) {
   .trackyour {
-    width: 100%;/* Slightly taller for mobile readability */
+    width: 100%;
+    /* Slightly taller for mobile readability */
   }
-    .pavalsoft-app{
-  height: 120px ;
-}
+
+  .pavalsoft-app {
+    height: 120px;
+  }
 
   .swiper-nav-icon {
     width: 20px !important;
@@ -188,6 +243,7 @@
   .navbar.navbar-expand-lg.navbar-light {
     padding: 1.5rem 2rem;
   }
+
   .swiper-nav-icon {
     width: 20px !important;
     height: 30px !important;
@@ -222,17 +278,18 @@
 
 
 
-@media (min-width: 1024px ) {
-.small-line1 {
-  width: 2px;
-  height: 22px;
-  background: #454545;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
+@media (min-width: 1024px) {
+  .small-line1 {
+    width: 2px;
+    height: 22px;
+    background: #454545;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 
 }
+
 @media (min-width: 576px) {
   .navbar-brand .mt-1 {
     margin-top: 1rem;
@@ -330,6 +387,7 @@
 @media (min-width: 576px) {
   .hero-text {
     max-width: 95%;
+    padding-top: 10px !important;
     text-align: left;
   }
 }
@@ -358,9 +416,9 @@
   }
 }
 
-.hero-text + .btn-dark {
+.hero-text+.btn-dark {
   font-size: clamp(12px, 1.6vw, 16px);
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
 }
 
 .contact-img {
@@ -482,7 +540,8 @@
 }
 
 .marquee-img {
-  height: 50px; /* Adjust as needed */
+  height: 50px;
+  /* Adjust as needed */
   object-fit: contain;
 }
 
@@ -490,8 +549,10 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-50%); /* Move half the width for seamless looping */
+    transform: translateX(-50%);
+    /* Move half the width for seamless looping */
   }
 }
 
@@ -501,14 +562,15 @@
 }
 
 /* Ensure images don't wrap */
-.marquee > * {
+.marquee>* {
   flex-shrink: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 576px) {
   .marquee-img {
-    height: 40px; /* Smaller images for mobile */
+    height: 40px;
+    /* Smaller images for mobile */
     margin: 0 8px;
   }
 }
