@@ -12,9 +12,6 @@ import '../assets/css/moblie.css';
 
 
 
-
-
-
 const MobileappSection = () => {
   const contentSets = [
     {
@@ -144,7 +141,7 @@ const MobileappSection = () => {
           <div
             key={index}
             className={`case-icon-row d-flex align-items-center gap-3 rounded px-3 py-2 shadow-sm mb-3 ${
-              activeIndex === item.index ? 'bg-success text-white' : 'bg-light'
+              activeIndex === item.index ? 'bg-success text-black' : 'bg-light'
             }`}
             onClick={() => item.index !== null && setActiveIndex(item.index)}
             style={{ cursor: item.index !== null ? 'pointer' : 'not-allowed' }}
@@ -157,7 +154,7 @@ const MobileappSection = () => {
               className="img-fluid"
               style={{ width: '36px', height: '36px' }}
             />
-            <h5 className="fw-bold mb-0">{item.text}</h5>
+            <h5 className="fw-bold mb-0 text-black">{item.text}</h5>
           </div>
         ))}
       </div>
@@ -170,12 +167,13 @@ const MobileappSection = () => {
             transition: all 0.2s ease;
           }
           .btn-success {
-            background-color: rgba(144, 236, 122, 0.78);
-            border-color: rgb(10, 114, 35);
+            background-color: rgba(138, 205, 44, 0.66);
+            border-color: (138, 205, 44, 0.66);
+            
           }
           .case-icon-row:hover {
             background-color:rgba(138, 205, 44, 0.66) !important;
-            color: white;
+            color: #ffff;
             transition: background-color 0.3s ease;
           }
         `}
