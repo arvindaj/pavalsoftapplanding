@@ -80,7 +80,7 @@
   height: 40px;
   background: linear-gradient(to bottom, #545252);
   margin: 0 10px;
-  
+
 }
 
 .position-absolute.d-none.d-xl-block {
@@ -96,14 +96,27 @@
 .trackyour p {
   width: 60%;
 }
+
 /* hero.css: Keep positioning, remove CSS animations */
 .pavalsoft-app {
   height: 0px;
 }
 
+.contact-img {
+  will-change: transform;
+  max-width: 100%;
+  position: relative;
+  left: 10%;
+  top: 50%;
+  transform: none;
+  margin: 0 auto;
+  display: block;
+
+}
+
 .contact-img-bottom-para {
   position: absolute;
-  left: 75%;
+  left: 72%;
   top: 50%;
 }
 
@@ -115,7 +128,7 @@
 
 .banerrighttop {
   position: absolute;
-  left: 75%;
+  left: 72%;
   top: 20%;
 }
 
@@ -133,7 +146,7 @@
 
 .Rectangleemptyright {
   position: absolute;
-  left: 77.5%;
+  left: 73.5%;
   top: 16%;
 }
 
@@ -147,21 +160,20 @@
   left: 45%;
   bottom: 30%;
 }
-/* Add animation for contact-img */
-.contact-img {
-  will-change: transform;  
-  max-height: 550px;
 
-}
+/* Add animation for contact-img */
+
 
 /* Keyframes for animations */
 @keyframes zoomIn {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -171,9 +183,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -183,15 +197,19 @@
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(5deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   75% {
     transform: rotate(-5deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -201,9 +219,11 @@
   0% {
     opacity: 0.6;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.6;
   }
@@ -213,9 +233,11 @@
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-10px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -225,9 +247,11 @@
   0% {
     opacity: 0.7;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.7;
   }
@@ -247,7 +271,7 @@
     bottom: 25%;
     top: 10%;
     text-align: center;
-    position:absolute;
+    position: absolute;
   }
 
   .hero-text {
@@ -290,7 +314,7 @@
     display: block;
   }
 
-  .banerlefthand{
+  .banerlefthand {
     position: absolute;
     left: 20%;
     top: 53%;
@@ -298,7 +322,8 @@
     margin: 10px auto;
     display: block;
   }
-  .banerrighttop{
+
+  .banerrighttop {
     position: absolute;
     left: 63%;
     top: 35%;
@@ -306,16 +331,17 @@
     margin: 10px auto;
     display: block;
   }
-  .banerlefttoppara
-  {
+
+  .banerlefttoppara {
     position: absolute;
     left: 15%;
-    top: 37.5%; 
+    top: 37.5%;
     max-width: 30%;
     margin: 10px auto;
     display: block;
   }
-  .Rectangleemptyleft{
+
+  .Rectangleemptyleft {
     position: absolute;
     left: 11%;
     top: 40%;
@@ -323,6 +349,7 @@
     margin: 10px auto;
     display: block;
   }
+
   .Rectangleemptyright {
     position: absolute;
     left: 67%;
@@ -587,77 +614,13 @@
   padding: 0.1rem 1rem;
 }
 
-.contact-img {
-  max-height: 250px;
-}
 
 
 
-@media (width: 768px) {
-.navbar-brand img {
-    max-width: 110px;
-  }
-
-  .navbar-brand .hero-text {
-    font-size: 0.75rem;
-  }
-
-  .contact-img {
-    max-width: 85%;
-    position: relative;
-    left: 0%;
-    transform: translateX(-50%);
-    top: 15%;
-  }
-.contact-img-bottom-para {
-    left: 57% ;
-    top: 58%;
-    max-width: 40%;
-  }
-
-  .banerlefthand {
-    left: 55%;
-    top: 32%;
-    max-width: 35%;
-  }
-
-  .banerrighttop {
-    left: 29%;
-    top: 45%;
-    max-width: 40%;
-  }
-
-  .banerlefttoppara {
-    left: 30%;
-    top: 29%;
-    max-width: 45%;
-  }
-
-  .Rectangleemptyleft {
-    left: 25%;
-    top: 40%;
-    max-width: 35%;
-  }
-
-  .Rectangleemptyright {
-    left: 55%;
-    top: 40%;
-    max-width: 35%;
-  }
-
-  .trackyour {
-    height: 70px !important;
-  }
-
-  .marquee-img {
-    height: 45px;
-  }
-
-}
 
 @media (min-width: 1200px) {
   .contact-img {
-    max-height: 530px;
+    max-height: 450px;
   }
 }
 
