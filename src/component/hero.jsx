@@ -116,7 +116,7 @@ const HeroSection = () => {
             <motion.img
               src={contactImg}
               alt="Contact Visual"
-              className="img-fluid contact-img"
+              className="img-fluid contact-img mb-5 mb-lg-0 mt-4 mt-lg-0"
               initial={{ x: '-100%', y: '100%' }}
               animate={{ x: 0, y: 0 }}
               transition={{ duration: 1.5, ease: 'easeOut' }}
