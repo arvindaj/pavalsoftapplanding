@@ -49,7 +49,7 @@
 }
 
 .position-absolute.d-none.d-lg-block {
-  top: 70%;
+  top: 57%;
   left: 50%;
   transform: rotate(0deg);
   width: clamp(60px, 8vw, 100px);
@@ -83,8 +83,6 @@
   
 }
 
-
-
 .position-absolute.d-none.d-xl-block {
   top: 65%;
   left: 18%;
@@ -98,7 +96,7 @@
 .trackyour p {
   width: 60%;
 }
-
+/* hero.css: Keep positioning, remove CSS animations */
 .pavalsoft-app {
   height: 0px;
 }
@@ -127,12 +125,13 @@
   top: 16%;
 }
 
-.Rectangleemptyleft{
+.Rectangleemptyleft {
   position: absolute;
   left: 53.5%;
   top: 16%;
 }
-.Rectangleemptyright{
+
+.Rectangleemptyright {
   position: absolute;
   left: 77.5%;
   top: 16%;
@@ -147,6 +146,89 @@
   position: absolute;
   left: 45%;
   bottom: 30%;
+}
+/* Add animation for contact-img */
+.contact-img {
+  will-change: transform;
+}
+
+/* Keyframes for animations */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 
@@ -376,13 +458,6 @@
   }
 }
 
-.hero-text {
-  max-width: 100%;
-  text-align: center;
-  font-size: clamp(12px, 1.8vw, 16px);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
 
 @media (min-width: 576px) {
   .hero-text {

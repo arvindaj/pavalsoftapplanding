@@ -4,10 +4,11 @@ import React, { useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Added Bootstrap Icons
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../assets/css/hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons'; // Added FontAwesome icon
+import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import bg from '../assets/img/minebg.png';
 import bgbox from '../assets/img/Rectangle 9.png';
 import logo from '../assets/img/logo.png';
@@ -24,7 +25,6 @@ import banerlefthand from '../assets/img/baner-left-hand.png';
 import banerrighttop from '../assets/img/baner-right-top.png';
 import banerlefttoppara from '../assets/img/baner-left-top-para.png';
 import Rectangleempty from '../assets/img/Rectangle-empty.png';
-
 import img1 from '../assets/img/clogo1.png';
 import img2 from '../assets/img/clogo2.png';
 import img3 from '../assets/img/clogo3.png';
@@ -61,7 +61,7 @@ const HeroSection = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light px-3 px-sm-4 px-lg-5 py-2 py-sm-3">
+      <nav className="navbar navbar-expand-lg navbar-light px-3 px-sm-4 px-lg-5 py-1 py-sm-3">
         <div className="container-fluid">
           <div className="d-none d-lg-block">
             <div className="line1">
@@ -69,9 +69,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="navbar-brand text-start mx-5">
+          <div className="navbar-brand text-start mx-5 m-0 p-0">
             <img src={logo} alt="Logo" className="img-fluid" />
-            <div className="mt-1 mt-sm-2">
+            <div className="mt-0 mt-sm-2">
               <p className="d-block text-center hero-text">Build Bold. Scale Smart. Win Digital.</p>
             </div>
             <div className="d-none d-lg-block position-absolute">
@@ -81,21 +81,21 @@ const HeroSection = () => {
 
           <div className="ms-auto text-start col-lg-4 mb-lg-5">
             <div className="d-flex flex-wrap gap-1 gap-sm-2 mb-1 mb-sm-2 align-items-start justify-content-start">
-              <span className="text-dark hero-text">Connect with</span>
-              <span className="text-dark ">
+              <span className="text-dark fs-5">Connect with</span>
+              <span className="text-dark mt-2">
                 <img src={inFlag} alt="IN" className="me-1" /> +91
               </span>
-              <span className="text-dark">
+              <span className="text-dark mt-2">
                 <img src={usFlag} alt="US" className="me-1" /> +1
               </span>
-              <span className="text-dark">
+              <span className="text-dark mt-2">
                 <img src={ukFlag} alt="UK" className="me-1" /> +44
               </span>
             </div>
             <div className="d-flex align-items-center justify-content-start gap-1 gap-sm-2 mb-1 mb-sm-2 col-lg-9 col-md-12">
-              <div className="d-flex align-items-center hero-text">
-                <img src={email} alt="email" className="me-1" />
-                <span>info@pavalsoftware.com</span>
+              <div className="d-flex align-items-center">
+                <img src={email} alt="email" className="me-1 " />
+                <span className='fs-5'>info@pavalsoftware.com</span>
               </div>
               <button className="btn btn-dark btn-sm">Get A Quote</button>
             </div>
@@ -104,7 +104,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="container  ">
+      <div className="container">
         <div className="row align-items-center p-0">
           <div className="col-12 col-lg-6 py-3 py-lg-5">
             <p className="mb-3 mb-sm-4 hero-text">
@@ -113,13 +113,62 @@ const HeroSection = () => {
             <button className="btn btn-dark">Explore Now</button>
           </div>
           <div className="col-12 col-lg-6 text-center mt-3 mt-lg-0">
-            <img src={contactImg} alt="Contact Visual" className="img-fluid contact-img" />
-            <img src={contactImgbottom} alt="Contact Visual" className="img-fluid contact-img-bottom-para" />
-            <img src={banerlefthand} alt="Contact Visual" className="img-fluid banerlefthand" />
-            <img src={banerrighttop} alt="Contact Visual" className="img-fluid banerrighttop" />
-             <img src={banerlefttoppara} alt="Contact Visual" className="img-fluid banerlefttoppara" />
-             <img src={Rectangleempty} alt="Contact Visual" className="img-fluid Rectangleemptyleft" />
-            <img src={Rectangleempty} alt="Contact Visual" className="img-fluid Rectangleemptyright"/>
+            <motion.img
+              src={contactImg}
+              alt="Contact Visual"
+              className="img-fluid contact-img"
+              initial={{ x: '-100%', y: '100%' }}
+              animate={{ x: 0, y: 0 }}
+              transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+            <motion.img
+              src={contactImgbottom}
+              alt="Contact Visual"
+              className="img-fluid contact-img-bottom-para"
+              initial={{ x: '-100%', y: '100%' }}
+              animate={{ x: 0, y: 0 }}
+              transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+            <motion.img
+              src={banerlefthand}
+              alt="Contact Visual"
+              className="img-fluid banerlefthand"
+              initial={{ x: '-100%', y: '-70%' }}
+               animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+            <motion.img
+              src={banerrighttop}
+              alt="Contact Visual"
+              className="img-fluid banerrighttop"
+             initial={{ x: '-100%', y: '-70%' }}
+               animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+            <motion.img
+              src={banerlefttoppara}
+              alt="Contact Visual"
+              className="img-fluid banerlefttoppara"
+              initial={{  x: '-100%', y: '-70%' }}
+                animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+            <motion.img
+              src={Rectangleempty}
+              alt="Contact Visual"
+              className="img-fluid Rectangleemptyleft"
+              initial={{ opacity: 0.7 }}
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <motion.img
+              src={Rectangleempty}
+              alt="Contact Visual"
+              className="img-fluid Rectangleemptyright"
+              initial={{ opacity: 0.7 }}
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            />
           </div>
 
           {/* Pavalsoft App Revolution */}
@@ -136,11 +185,11 @@ const HeroSection = () => {
       {/* Recognized Section */}
       <div className="container">
         <div className="d-flex flex-column flex-lg-row align-items-center">
-          <div className="container-fluid px-2 px-sm-3 px-lg-5 py-md-4 col-12 col-lg-6 d-flex flex-row  position-relative">
+          <div className="container-fluid px-2 px-sm-3 px-lg-5 py-md- سفري4 col-12 col-lg-6 d-flex flex-row position-relative">
             <FontAwesomeIcon
               icon={faArrowDownLong}
               onClick={handleNext}
-              className="swiper-nav-icon ms-2 mt-4 "
+              className="swiper-nav-icon ms-2 mt-4"
               style={{
                 width: '30px',
                 height: '45px',
@@ -157,7 +206,7 @@ const HeroSection = () => {
               loop={true}
               allowTouchMove={true}
               slidesPerView={1}
-              className="trackyour ms-4 "
+              className="trackyour ms-4"
               style={{ height: '100px', overflow: 'hidden' }}
               ref={swiperRef}
             >
