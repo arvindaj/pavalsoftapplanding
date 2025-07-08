@@ -281,7 +281,7 @@
 
   .contact-img-bottom-para {
     position: absolute;
-    left: 67%;
+    left: 63%;
     top: 57%;
     max-width: 30%;
     margin: 10px auto;
@@ -290,16 +290,16 @@
 
   .banerlefthand{
     position: absolute;
-    left: 15%;
-    top: 51%;
-    max-width: 25%;
+    left: 22%;
+    top: 48%;
+    max-width: 23%;
     margin: 10px auto;
     display: block;
   }
   .banerrighttop{
     position: absolute;
-    left: 70%;
-    top: 39%;
+    left: 63%;
+    top: 35%;
     max-width: 25%;
     margin: 10px auto;
     display: block;
@@ -307,15 +307,15 @@
   .banerlefttoppara
   {
     position: absolute;
-    left: 10%;
-    top: 39%;
+    left: 15%;
+    top: 34.5%;
     max-width: 30%;
     margin: 10px auto;
     display: block;
   }
   .Rectangleemptyleft{
     position: absolute;
-    left: 10%;
+    left: 11%;
     top: 40%;
     max-width: 30%;
     margin: 10px auto;
@@ -323,7 +323,7 @@
   }
   .Rectangleemptyright {
     position: absolute;
-    left: 70%;
+    left: 67%;
     top: 45%;
     max-width: 25%;
     margin: 10px auto;
