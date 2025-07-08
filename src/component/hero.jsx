@@ -116,7 +116,7 @@ const HeroSection = () => {
             <motion.img
               src={contactImg}
               alt="Contact Visual"
-              className="img-fluid contact-img mb-5 mb-lg-0 mt-4 mt-lg-0"
+              className="img-fluid contact-img mb-5 mb-lg-0 mt-4 mt-lg-0 contactImg"
               initial={{ x: '-100%', y: '100%' }}
               animate={{ x: 0, y: 0 }}
               transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -157,24 +157,24 @@ const HeroSection = () => {
               src={Rectangleempty}
               alt="Contact Visual"
               className="img-fluid Rectangleemptyleft"
-              initial={{ opacity: 0.7 }}
-              animate={{ opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+               initial={{  x: '-100%', y: '-30%' }}
+                animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
             />
             <motion.img
               src={Rectangleempty}
               alt="Contact Visual"
               className="img-fluid Rectangleemptyright"
-              initial={{ opacity: 0.7 }}
-              animate={{ opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              initial={{  x: '-150%', y: '40%' }}
+                animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
             />
           </div>
 
           {/* Pavalsoft App Revolution */}
-          <div className="mb-0 pavalsoft-app">
-            <div className="pavalsoft-app-revolutions">
-              <h1 className="text-center fs-1 d-lg-block">
+          <div className="mb-0 pavalsoft-app mt-5 mt-sm-5">
+            <div className="pavalsoft-app-revolutions mt-sm-5">
+              <h1 className="text-center fs-1 d-lg-block mt-sm-4 mt-5">
                 Pavalsoft App<br />Revolution
               </h1>
             </div>

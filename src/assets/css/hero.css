@@ -149,7 +149,9 @@
 }
 /* Add animation for contact-img */
 .contact-img {
-  will-change: transform;
+  will-change: transform;  
+  max-height: 550px;
+
 }
 
 /* Keyframes for animations */
@@ -240,7 +242,7 @@
 @media (max-width: 576px) {
   .pavalsoft-app-revolutions h1 {
     font-size: 1.5rem;
-    left: 50%;
+    left: 50% !important;
     transform: translateX(-50%);
     bottom: 25%;
     top: 10%;
@@ -290,8 +292,8 @@
 
   .banerlefthand{
     position: absolute;
-    left: 22%;
-    top: 48%;
+    left: 20%;
+    top: 53%;
     max-width: 23%;
     margin: 10px auto;
     display: block;
@@ -308,7 +310,7 @@
   {
     position: absolute;
     left: 15%;
-    top: 34.5%;
+    top: 37.5%; 
     max-width: 30%;
     margin: 10px auto;
     display: block;
@@ -335,29 +337,6 @@
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -408,18 +387,7 @@
   }
 }
 
-@media (min-width: 320px) {
-  .pavalsoft-app-revolutions {
-    font-size: 2rem;
-    top: 0px;
-    margin-bottom: 10px;
 
-  }
-
-  .pavalsoft-app {
-    height: 50px;
-  }
-}
 
 
 
@@ -454,7 +422,7 @@
   padding: 1rem 1.5rem;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .navbar.navbar-expand-lg.navbar-light {
     padding: 1.5rem 2rem;
   }
@@ -466,7 +434,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .navbar.navbar-expand-lg.navbar-light {
     padding: 1.5rem 3rem;
   }
@@ -592,19 +560,9 @@
 }
 
 
-@media (min-width: 576px) {
-  .hero-text {
-    max-width: 95%;
-    padding-top: 10px !important;
-    text-align: left;
-  }
-}
 
-@media (min-width: 768px) {
-  .hero-text {
-    max-width: 90%;
-  }
-}
+
+
 
 @media (min-width: 992px) {
   .hero-text {
@@ -633,29 +591,77 @@
   max-height: 250px;
 }
 
-@media (min-width: 576px) {
-  .contact-img {
-    max-height: 300px;
-  }
-}
 
-@media (min-width: 768px) {
-  .contact-img {
-    max-height: 350px;
+
+@media (width: 768px) {
+.navbar-brand img {
+    max-width: 110px;
   }
+
+  .navbar-brand .hero-text {
+    font-size: 0.75rem;
+  }
+
+  .contact-img {
+    max-width: 85%;
+    position: relative;
+    left: 0%;
+    transform: translateX(-50%);
+    top: 15%;
+  }
+.contact-img-bottom-para {
+    left: 57% ;
+    top: 58%;
+    max-width: 40%;
+  }
+
+  .banerlefthand {
+    left: 55%;
+    top: 32%;
+    max-width: 35%;
+  }
+
+  .banerrighttop {
+    left: 29%;
+    top: 45%;
+    max-width: 40%;
+  }
+
+  .banerlefttoppara {
+    left: 30%;
+    top: 29%;
+    max-width: 45%;
+  }
+
+  .Rectangleemptyleft {
+    left: 25%;
+    top: 40%;
+    max-width: 35%;
+  }
+
+  .Rectangleemptyright {
+    left: 55%;
+    top: 40%;
+    max-width: 35%;
+  }
+
+  .trackyour {
+    height: 70px !important;
+  }
+
+  .marquee-img {
+    height: 45px;
+  }
+
 }
 
 @media (min-width: 1200px) {
   .contact-img {
-    max-height: 400px;
+    max-height: 530px;
   }
 }
 
-@media (min-width: 1400px) {
-  .contact-img {
-    max-height: 450px;
-  }
-}
+
 
 /* Recognized Section */
 .container.my-3 {
@@ -671,7 +677,7 @@
 }
 
 .carousel-box {
-  height: 100px;
+  height: 150px;
   width: 100%;
 }
 
