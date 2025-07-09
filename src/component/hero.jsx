@@ -121,6 +121,22 @@ const HeroSection = () => {
               animate={{ x: 0, y: 0 }}
               transition={{ duration: 1.5, ease: 'easeOut' }}
             />
+             <motion.img
+              src={Rectangleempty}
+              alt="Contact Visual"
+              className="img-fluid Rectangleemptyleft"
+               initial={{  x: '-100%', y: '-30%' }}
+                animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
+              <motion.img
+              src={Rectangleempty}
+              alt="Contact Visual"
+              className="img-fluid Rectangleemptyright"
+              initial={{  x: '-150%', y: '40%' }}
+                animate={{ x: 0, y: 0 }}
+             transition={{ duration: 1.5, ease: 'easeOut' }}
+            />
             <motion.img
               src={contactImgbottom}
               alt="Contact Visual"
@@ -153,22 +169,8 @@ const HeroSection = () => {
                 animate={{ x: 0, y: 0 }}
              transition={{ duration: 1.5, ease: 'easeOut' }}
             />
-            <motion.img
-              src={Rectangleempty}
-              alt="Contact Visual"
-              className="img-fluid Rectangleemptyleft"
-               initial={{  x: '-100%', y: '-30%' }}
-                animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <motion.img
-              src={Rectangleempty}
-              alt="Contact Visual"
-              className="img-fluid Rectangleemptyright"
-              initial={{  x: '-150%', y: '40%' }}
-                animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
+           
+          
           </div>
 
           {/* Pavalsoft App Revolution */}

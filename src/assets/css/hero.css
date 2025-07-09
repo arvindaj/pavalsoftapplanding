@@ -104,9 +104,9 @@
 
 .contact-img {
   will-change: transform;
-  max-width: 100%;
+  max-width: 90%;
   position: relative;
-  left: 10%;
+  left: 0%;
   top: 50%;
   transform: none;
   margin: 0 auto;
@@ -116,7 +116,7 @@
 
 .contact-img-bottom-para {
   position: absolute;
-  left: 72%;
+  left: 75% !important;
   top: 50%;
 }
 
@@ -128,7 +128,7 @@
 
 .banerrighttop {
   position: absolute;
-  left: 72%;
+  left: 75%;
   top: 20%;
 }
 
@@ -141,13 +141,13 @@
 .Rectangleemptyleft {
   position: absolute;
   left: 53.5%;
-  top: 16%;
+  top: 24%;
 }
 
 .Rectangleemptyright {
   position: absolute;
-  left: 73.5%;
-  top: 16%;
+  left: 76.5%;
+  top: 24%;
 }
 
 .pavalsoft-app-revolutions h1 {
@@ -307,7 +307,7 @@
 
   .contact-img-bottom-para {
     position: absolute;
-    left: 63%;
+    left: 65% !important;
     top: 57%;
     max-width: 30%;
     margin: 10px auto;
