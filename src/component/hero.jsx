@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../assets/css/hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDownLong, faTimes, faUser, faEnvelope, faPhone, faMessage } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import bg from '../assets/img/minebg.png';
 import bgbox from '../assets/img/Rectangle 9.png';
@@ -34,6 +34,13 @@ import img5 from '../assets/img/clogo5.png';
 const HeroSection = () => {
   const swiperRef = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
 
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -45,6 +52,28 @@ const HeroSection = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Handle form submission logic here
+    alert('Thank you for your message! We will get back to you soon.');
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+    setIsFormOpen(false);
   };
 
   const slideData = [
@@ -101,6 +130,181 @@ const HeroSection = () => {
         <img src={bgbox} alt="bg-box" className="position-absolute d-none d-sm-block" />
       </div>
 
+      {/* Contact Form Overlay */}
+      <AnimatePresence>
+        {isFormOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"
+              style={{ zIndex: 1000 }}
+              onClick={() => setIsFormOpen(false)}
+            />
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              className="position-fixed top-0 end-0 h-100 bg-white shadow-lg"
+              style={{ 
+                zIndex: 1001, 
+                width: '400px',
+                maxWidth: '90vw',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="h-100 d-flex flex-column">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-primary to-secondary text-white p-4 position-relative"
+                     style={{
+                       background: 'linear-gradient(135deg, #007bff 0%, #6c5ce7 100%)'
+                     }}>
+                  <button
+                    onClick={() => setIsFormOpen(false)}
+                    className="btn btn-link text-white position-absolute top-3 end-3 p-2"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <FontAwesomeIcon icon={faTimes} size="lg" />
+                  </button>
+                  <h3 className="mb-2 fw-bold">Get In Touch</h3>
+                  <p className="mb-0 opacity-75">Let's discuss your project</p>
+                </div>
+
+                {/* Form Content */}
+                <div className="flex-grow-1 p-4 overflow-auto">
+                  <form onSubmit={handleSubmit} className="h-100">
+                    <div className="mb-4">
+                      <label className="form-label fw-semibold text-dark">
+                        <FontAwesomeIcon icon={faUser} className="me-2 text-primary" />
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleFormChange}
+                        className="form-control form-control-lg border-2 rounded-3"
+                        placeholder="Enter your full name"
+                        required
+                        style={{
+                          borderColor: '#e0e6ed',
+                          transition: 'all 0.3s ease'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = '#007bff'}
+                        onBlur={(e) => e.target.style.borderColor = '#e0e6ed'}
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label className="form-label fw-semibold text-dark">
+                        <FontAwesomeIcon icon={faEnvelope} className="me-2 text-primary" />
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        className="form-control form-control-lg border-2 rounded-3"
+                        placeholder="Enter your email"
+                        required
+                        style={{
+                          borderColor: '#e0e6ed',
+                          transition: 'all 0.3s ease'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = '#007bff'}
+                        onBlur={(e) => e.target.style.borderColor = '#e0e6ed'}
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label className="form-label fw-semibold text-dark">
+                        <FontAwesomeIcon icon={faPhone} className="me-2 text-primary" />
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleFormChange}
+                        className="form-control form-control-lg border-2 rounded-3"
+                        placeholder="Enter your phone number"
+                        required
+                        style={{
+                          borderColor: '#e0e6ed',
+                          transition: 'all 0.3s ease'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = '#007bff'}
+                        onBlur={(e) => e.target.style.borderColor = '#e0e6ed'}
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label className="form-label fw-semibold text-dark">
+                        <FontAwesomeIcon icon={faMessage} className="me-2 text-primary" />
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleFormChange}
+                        className="form-control border-2 rounded-3"
+                        rows="4"
+                        placeholder="Tell us about your project..."
+                        required
+                        style={{
+                          borderColor: '#e0e6ed',
+                          transition: 'all 0.3s ease',
+                          resize: 'none'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = '#007bff'}
+                        onBlur={(e) => e.target.style.borderColor = '#e0e6ed'}
+                      />
+                    </div>
+
+                    <div className="d-grid gap-2 mt-auto">
+                      <button
+                        type="submit"
+                        className="btn btn-lg rounded-3 text-white fw-bold position-relative overflow-hidden"
+                        style={{
+                          background: 'linear-gradient(135deg, #007bff 0%, #6c5ce7 100%)',
+                          border: 'none',
+                          transition: 'all 0.3s ease',
+                          transform: 'translateY(0)'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.transform = 'translateY(-2px)';
+                          e.target.style.boxShadow = '0 8px 25px rgba(0,123,255,0.4)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.transform = 'translateY(0)';
+                          e.target.style.boxShadow = 'none';
+                        }}
+                      >
+                        Send Message
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setIsFormOpen(false)}
+                        className="btn btn-outline-secondary btn-lg rounded-3"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light px-2 px-sm-4 px-lg-5 py-1 py-sm-3">
         <div className="container-fluid">
@@ -145,6 +349,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
+      <div>
       <div className="hero-content-section">
         <div className="container">
           <div className="row align-items-center">
@@ -244,6 +449,30 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* talk-to-us-section */}
+      <div className='talk-to-us-section position-absolute' style={{ 
+        left:'93%',
+        top: '35%', 
+        // transform: 'translateY(-100%)',
+        zIndex: 999
+      }}>
+        <motion.button 
+          className='talk-to-us shadow-lg px-4 py-3'
+          onClick={() => setIsFormOpen(true)}
+          whileHover={{ 
+            boxShadow: '0 10px 20px rgba(48, 48, 48, 0.61)'
+          }}
+          whileTap={{ scale: 0.95 }}
+        
+        >
+          Talk to us
+        </motion.button>
+      </div>
+
+</div>
+
+
 
       {/* Pavalsoft App Revolution */}
       <div className="pavalsoft-app-revolutions">
