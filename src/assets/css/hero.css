@@ -116,14 +116,15 @@
 
 .contact-img-bottom-para {
   position: absolute;
-  left: 75% !important;
-  top: 50%;
+  left: 76% !important;
+  top: 53% !important;
 }
 
 .banerlefthand {
   position: absolute;
   left: 58.3%;
-  top: 35%;
+  top: 38% !important;
+  width: 9%;
 }
 
 .banerrighttop {
@@ -158,7 +159,7 @@
   margin: 0;
   position: absolute;
   left: 45%;
-  bottom: 30%;
+  bottom: 31.2%;
 }
 
 /* Add animation for contact-img */
@@ -316,9 +317,9 @@
 
   .banerlefthand {
     position: absolute;
-    left: 20%;
-    top: 53%;
-    max-width: 23%;
+    left: 18% !important;
+    top: 53% !important;
+    width: 23% !important;
     margin: 10px auto;
     display: block;
   }
