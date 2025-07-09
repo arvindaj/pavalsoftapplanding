@@ -4,3 +4,7 @@
     background: linear-gradient(to bottom, #545252); /* Example gradient */
     margin: 0 10px;
 }
+
+.features-mine{
+    overflow-x: hidden;
+}

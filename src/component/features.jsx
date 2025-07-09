@@ -18,7 +18,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="w-100 position-relative">
+    <div className="w-100 position-relative features-mine">
       {/* Background Image */}
       <div className="position-absolute w-100 h-100" style={{ zIndex: -1, opacity: 0.2 }}>
         <img

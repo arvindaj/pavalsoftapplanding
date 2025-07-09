@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +8,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../assets/css/hero.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import bg from '../assets/img/minebg.png';
 import bgbox from '../assets/img/Rectangle 9.png';
 import logo from '../assets/img/logo.png';
@@ -33,6 +33,7 @@ import img5 from '../assets/img/clogo5.png';
 
 const HeroSection = () => {
   const swiperRef = useRef(null);
+  const [activeTab, setActiveTab] = useState(0);
 
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -52,8 +53,48 @@ const HeroSection = () => {
     { text: 'Boost your digital presence with high-performance apps built.' },
   ];
 
+  // Tab data for the banner section
+  const tabData = [
+    {
+      id: 0,
+      title: 'Mobile Apps',
+      content: 'Leading mobile app development with 500+ successful projects',
+      images: {
+        main: contactImg,
+        bottom: contactImgbottom,
+        leftHand: banerlefthand,
+        rightTop: banerrighttop,
+        leftTopPara: banerlefttoppara,
+      }
+    },
+    {
+      id: 1,
+      title: 'Web Development',
+      content: 'Custom web solutions tailored to your business needs',
+      images: {
+        main: contactImg,
+        bottom: contactImgbottom,
+        leftHand: banerlefthand,
+        rightTop: banerrighttop,
+        leftTopPara: banerlefttoppara,
+      }
+    },
+    {
+      id: 2,
+      title: 'UI/UX Design',
+      content: 'Beautiful and intuitive designs that engage users',
+      images: {
+        main: contactImg,
+        bottom: contactImgbottom,
+        leftHand: banerlefthand,
+        rightTop: banerrighttop,
+        leftTopPara: banerlefttoppara,
+      }
+    }
+  ];
+
   return (
-    <div className="position-relative">
+    <div className="position-relative hero-mine">
       {/* Background Images */}
       <div className="position-absolute w-100">
         <img src={bg} alt="background" className="w-100 vh-100 object-fit-cover" />
@@ -61,7 +102,7 @@ const HeroSection = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light px-3 px-sm-4 px-lg-5 py-1 py-sm-3">
+      <nav className="navbar navbar-expand-lg navbar-light px-2 px-sm-4 px-lg-5 py-1 py-sm-3">
         <div className="container-fluid">
           <div className="d-none d-lg-block">
             <div className="line1">
@@ -69,10 +110,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="navbar-brand text-start mx-5 m-0 p-0">
+          <div className="navbar-brand text-center text-lg-start mx-2 mx-lg-5 m-0 p-0">
             <img src={logo} alt="Logo" className="img-fluid" />
-            <div className="mt-0 mt-sm-2">
-              <p className="d-block text-center hero-text">Build Bold. Scale Smart. Win Digital.</p>
+            <div className="mt-1 mt-sm-2">
+              <p className="d-block text-center hero-text mb-0">Build Bold. Scale Smart. Win Digital.</p>
             </div>
             <div className="d-none d-lg-block position-absolute">
               <div className="bg-dark position-absolute end-0"></div>
@@ -80,22 +121,22 @@ const HeroSection = () => {
           </div>
 
           <div className="ms-auto text-start col-lg-4 mb-lg-5">
-            <div className="d-flex flex-wrap gap-1 gap-sm-2 mb-1 mb-sm-2 align-items-start justify-content-start">
-              <span className="text-dark fs-5">Connect with</span>
-              <span className="text-dark mt-2">
+            <div className="d-flex flex-wrap gap-1 gap-sm-2 mb-1 mb-sm-2 align-items-start justify-content-end">
+              <span className="text-dark fs-6 fs-sm-5">Connect with</span>
+              <span className="text-dark mt-1 mt-sm-2 fs-6 fs-sm-5">
                 <img src={inFlag} alt="IN" className="me-1" /> +91
               </span>
-              <span className="text-dark mt-2">
+              <span className="text-dark mt-1 mt-sm-2 fs-6 fs-sm-5">
                 <img src={usFlag} alt="US" className="me-1" /> +1
               </span>
-              <span className="text-dark mt-2">
+              <span className="text-dark mt-1 mt-sm-2 fs-6 fs-sm-5">
                 <img src={ukFlag} alt="UK" className="me-1" /> +44
               </span>
             </div>
-            <div className="d-flex align-items-center justify-content-start gap-1 gap-sm-2 mb-1 mb-sm-2 col-lg-9 col-md-12">
+            <div className="d-flex flex-wrap align-items-center justify-content-end gap-1 gap-sm-2 mb-1 mb-sm-2">
               <div className="d-flex align-items-center">
-                <img src={email} alt="email" className="me-1 " />
-                <span className='fs-5'>info@pavalsoftware.com</span>
+                <img src={email} alt="email" className="me-1" />
+                <span className='fs-6 fs-sm-5'>info@pavalsoftware.com</span>
               </div>
               <button className="btn btn-dark btn-sm">Get A Quote</button>
             </div>
@@ -104,131 +145,168 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="container">
-        <div className="row align-items-center p-0">
-          <div className="col-12 col-lg-6 py-3 py-lg-5">
-            <p className="mb-3 mb-sm-4 hero-text">
-              MindInventory is a leading Mobile app development service provider in USA and India who have delivered 500+ apps for various Industries. Be it a native mobile app for Android or iOS or cross-platform apps using Flutter and React Native, we have done it all. From MVP to custom application development, we offer end-to-end mobile app development services catering to your varying needs.
-            </p>
-            <button className="btn btn-dark">Explore Now</button>
-          </div>
-          <div className="col-12 col-lg-6 text-center mt-3 mt-lg-0">
-            <motion.img
-              src={contactImg}
-              alt="Contact Visual"
-              className="img-fluid contact-img mb-5 mb-lg-0 mt-4 mt-lg-0 contactImg"
-              initial={{ x: '-100%', y: '100%' }}
-              animate={{ x: 0, y: 0 }}
-              transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-             <motion.img
-              src={Rectangleempty}
-              alt="Contact Visual"
-              className="img-fluid Rectangleemptyleft"
-               initial={{  x: '-100%', y: '-30%' }}
-                animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-              <motion.img
-              src={Rectangleempty}
-              alt="Contact Visual"
-              className="img-fluid Rectangleemptyright"
-              initial={{  x: '-150%', y: '40%' }}
-                animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <motion.img
-              src={contactImgbottom}
-              alt="Contact Visual"
-              className="img-fluid contact-img-bottom-para"
-              initial={{ x: '-100%', y: '100%' }}
-              animate={{ x: 0, y: 0 }}
-              transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <motion.img
-              src={banerlefthand}
-              alt="Contact Visual"
-              className="img-fluid banerlefthand"
-              initial={{ x: '-100%', y: '-70%' }}
-               animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <motion.img
-              src={banerrighttop}
-              alt="Contact Visual"
-              className="img-fluid banerrighttop"
-             initial={{ x: '-100%', y: '-70%' }}
-               animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-            <motion.img
-              src={banerlefttoppara}
-              alt="Contact Visual"
-              className="img-fluid banerlefttoppara"
-              initial={{  x: '-100%', y: '-70%' }}
-                animate={{ x: 0, y: 0 }}
-             transition={{ duration: 1.5, ease: 'easeOut' }}
-            />
-           
-          
-          </div>
+      <div className="hero-content-section">
+        <div className="container">
+          <div className="row align-items-center">
+            {/* Text Content */}
+            <div className="col-12 col-lg-6 hero-text-content">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="hero-text">
+                    {tabData[activeTab].content}. MindInventory is a leading Mobile app development service provider in USA and India who have delivered 500+ apps for various Industries. Be it a native mobile app for Android or iOS or cross-platform apps using Flutter and React Native, we have done it all.
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+              <button className="btn btn-dark">Explore Now</button>
+            </div>
 
-          {/* Pavalsoft App Revolution */}
-          <div className="mb-0 pavalsoft-app mt-5 mt-sm-5">
-            <div className="pavalsoft-app-revolutions mt-sm-5">
-              <h1 className="text-center fs-1 d-lg-block mt-sm-4 mt-5">
-                Pavalsoft App<br />Revolution
-              </h1>
+            {/* Banner Images Section */}
+            <div className="banner-section text-center mt-3">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                >
+                  <motion.img
+                    src={tabData[activeTab].images.main}
+                    alt="Contact Visual"
+                    className="img-fluid contact-img mb-5 mb-lg-0 mt-4 mt-lg-0 contactImg"
+                    initial={{ x: '-100%', y: '100%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut' }}
+                  />
+
+                  <motion.img
+                    src={Rectangleempty}
+                    alt="Rectangle Left"
+                    className="img-fluid Rectangleemptyleft"
+                    initial={{ x: '-100%', y: '-30%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.2 }}
+                  />
+
+                  <motion.img
+                    src={Rectangleempty}
+                    alt="Rectangle Right"
+                    className="img-fluid Rectangleemptyright"
+                    initial={{ x: '-150%', y: '40%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.3 }}
+                  />
+
+                  <motion.img
+                    src={tabData[activeTab].images.bottom}
+                    alt="Bottom Para"
+                    className="contact-img-bottom-para"
+                    initial={{ x: '-100%', y: '100%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.4 }}
+                  />
+
+                  <motion.img
+                    src={tabData[activeTab].images.leftHand}
+                    alt="Left Hand"
+                    className="banerlefthand"
+                    initial={{ x: '-100%', y: '-70%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.5 }}
+                  />
+
+                  <motion.img
+                    src={tabData[activeTab].images.rightTop}
+                    alt="Right Top"
+                    className="img-fluid banerrighttop"
+                    initial={{ x: '-100%', y: '-70%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.6 }}
+                  />
+
+                  <motion.img
+                    src={tabData[activeTab].images.leftTopPara}
+                    alt="Left Top Para"
+                    className="img-fluid banerlefttoppara"
+                    initial={{ x: '-100%', y: '-70%' }}
+                    animate={{ x: 0, y: 0 }}
+                    transition={{ duration: 1.5, ease: 'easeOut', delay: 0.7 }}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Pavalsoft App Revolution */}
+      <div className="pavalsoft-app-revolutions">
+        <div className="container">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            Pavalsoft App<br />Revolution
+          </motion.h1>
+        </div>
+      </div>
+
       {/* Recognized Section */}
-      <div className="container">
-        <div className="d-flex flex-column flex-lg-row align-items-center">
-          <div className="container-fluid px-2 px-sm-3 px-lg-5 py-md- سفري4 col-12 col-lg-6 d-flex flex-row position-relative">
-            <FontAwesomeIcon
-              icon={faArrowDownLong}
-              onClick={handleNext}
-              className="swiper-nav-icon ms-2 mt-4"
-              style={{
-                width: '30px',
-                height: '45px',
-                background: 'transparent',
-                border: '1px solid #000',
-                padding: '5px',
-                cursor: 'pointer',
-              }}
-            />
-            <Swiper
-              direction="vertical"
-              modules={[Autoplay, Navigation]}
-              autoplay={{ delay: 3000, disableOnInteraction: true }}
-              loop={true}
-              allowTouchMove={true}
-              slidesPerView={1}
-              className="trackyour ms-4"
-              style={{ height: '100px', overflow: 'hidden' }}
-              ref={swiperRef}
-            >
-              {slideData.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="d-flex flex-column justify-content-start align-items-start">
-                    <p className="text-black text-start mt-3 mx-md-4 hero-text">{item.text}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+      <div className="container py-3 py-md-4">
+        <div className="row align-items-center">
+          <div className="col-12 col-lg-6 mb-3 mb-lg-0">
+            <div className="d-flex align-items-center">
+              <FontAwesomeIcon
+                icon={faArrowDownLong}
+                onClick={handleNext}
+                className="swiper-nav-icon me-3"
+                style={{
+                  width: '30px',
+                  height: '45px',
+                  background: 'transparent',
+                  border: '1px solid #000',
+                  padding: '5px',
+                  cursor: 'pointer',
+                }}
+              />
+              <Swiper
+                direction="vertical"
+                modules={[Autoplay, Navigation]}
+                autoplay={{ delay: 3000, disableOnInteraction: true }}
+                loop={true}
+                allowTouchMove={true}
+                slidesPerView={1}
+                className="trackyour flex-grow-1"
+                style={{ height: '100px', overflow: 'hidden' }}
+                ref={swiperRef}
+              >
+                {slideData.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="d-flex align-items-center h-100">
+                      <p className="text-black hero-text mb-0">{item.text}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
 
-          <div className="text-center text-lg-start mt-3 mt-lg-0 ms-lg-4 col-12 col-lg-6">
-            <div className="d-flex flex-wrap gap-3 mt-3">
-              <h5 className="fw-bold">Recognized <br />By</h5>
-              <div className="line3"></div>
-              <div>
-                <img src={r1} alt="R1" height="40" className="me-2" />
-                <img src={r2} alt="R2" height="40" className="me-2" />
+          <div className="col-12 col-lg-6">
+            <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-3">
+              <h5 className="fw-bold text-center text-sm-start">
+                Recognized <br className="d-none d-sm-block" />By
+              </h5>
+              <div className="line3 d-none d-sm-block"></div>
+              <div className="d-flex gap-2">
+                <img src={r1} alt="R1" height="40" />
+                <img src={r2} alt="R2" height="40" />
                 <img src={r3} alt="R3" height="40" />
               </div>
             </div>
