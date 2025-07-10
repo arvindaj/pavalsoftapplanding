@@ -3,17 +3,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bg from '../assets/img/techblackbg.png';
-import img4 from '../assets/img/oneslide 2.png';
+import img4 from '../assets/img/Group 69.png';
 import img5 from '../assets/img/Mask group.png';
-import img6 from '../assets/img/Ellipse 29 (1).png';
-import img7 from '../assets/img/Ellipse 30.png';
 import icon1 from '../assets/img/ALML.png';
 import icon2 from '../assets/img/compute-vission.png';
 import icon3 from '../assets/img/CLOUD.png';
 import icon4 from '../assets/img/ARVR.png';
 import '../assets/css/technology.css';
 
-function  TechnologiesPage() {
+function TechnologiesPage() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -32,7 +30,7 @@ function  TechnologiesPage() {
 
       {/* Header */}
       <div className="container mb-4 mb-md-5 text-center text-md-start">
-        <h1 className="text-dark fw-bold fs-3 fs-md-2" style={{ maxWidth: '900px' }}>
+        <h1 className="text-dark fw-bold fs-1 fs-md-2" style={{ maxWidth: '900px' }}>
           Technologies We Use For Mobile App Development
         </h1>
         <p className="text-dark fs-6 fs-md-5 mt-2" style={{ maxWidth: '900px' }}>
@@ -47,12 +45,13 @@ function  TechnologiesPage() {
           {/* Left Image Section */}
           <div className="col-12 col-lg-6 d-flex flex-column align-items-center position-relative tech-img-wrapper">
             <img src={img4} alt="Phone frame" className="img-fluid tech-img4 p-2" data-aos="fade-right" />
-            <img src={img6} alt="User interacting" className="img-fluid tech-img6" data-aos="fade-up" />
-            <img src={img7} alt="Decorative background" className="img-fluid tech-img7" data-aos="fade-in" />
-            <p className="real-time-text text-dark fs-6 fw-medium text-center ">
+            <div className="circle-container d-flex justify-content-center align-items-center position-relative">
+              <div className="circle circle1"></div>
+              <div className="circle circle2 "></div>
+            </div>
+            <p className="real-time-text text-dark fs-6 fw-medium text-start ">
               Real Time Experience
             </p>
-
           </div>
 
 
@@ -113,7 +112,7 @@ function  TechnologiesPage() {
             />
           </div>
 
-          <h1 className="end-to-end-heading fw-bold">
+          <h1 className="end-to-end-heading fw-bold fs-1">
             Our <span className="highlight-yellow">End-to-End</span> Mobile App <br />
             Development Services
           </h1>

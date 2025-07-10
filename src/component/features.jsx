@@ -50,7 +50,7 @@ const Features = () => {
           <div className="col-12 col-lg-6 pt-5 pt-lg-0 position-relative p-4">
             <h1 className="text-dark mb-0 fs-5 fs-md-2 mb-2">Find the best developers for</h1>
 
-            <h1 className="fw-bold text-dark fs-4 fs-md-3">Mobile app <br />Development services</h1>
+            <h1 className="fw-bold text-dark fs-1 fs-md-3">Mobile app <br />Development services</h1>
             <p className="text-dark fs-5 fs-md-5 my-3">
               Schedule a consultation with our skilled mobile app developers to convey your idea and explore possible solutions that can drive creativity and efficiency in your business.
             </p>
@@ -83,7 +83,7 @@ const Features = () => {
 
       {/* Stats Container */}
       <div
-        className="container my-4 p-4 rounded-4 position-relative"
+        className="container my-4 p-4 rounded-3 position-relative"
         style={{
           backdropFilter: 'blur(10px)',
           backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -95,7 +95,7 @@ const Features = () => {
         <div className="row align-items-center g-4">
           {/* Stats Left */}
           <div className="col-12 col-lg-3 text-center text-lg-start">
-            <h4 className="fw-bold text-dark fs-4 fs-lg-3 mb-0">
+            <h4 className="fw-bold text-dark fs-1 fs-lg-3 mb-0">
               Ready to  <br />Transform <br /> Your Online  <br /> Presence?
             </h4>
           </div>
@@ -112,8 +112,8 @@ const Features = () => {
             <div
               className="position-absolute rounded-circle d-none d-lg-block"
               style={{
-                width: '300px',
-                height: '300px',
+                width: '280px',
+                height: '280px',
                 backgroundColor: '#97c15a66',
                 left: '-90%',
                 top: '-40px',

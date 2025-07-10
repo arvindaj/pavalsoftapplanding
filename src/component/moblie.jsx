@@ -56,7 +56,7 @@ const MobileappSection = () => {
     <div className="text-center py-4 py-md-5 p-5 p-lg-0">
       {/* Top Section */}
       <div className="container mb-4 mb-md-5">
-        <h1 className="fw-bold text-dark fs-3 mb-3">
+        <h1 className="fw-bold text-dark fs-1 mb-3">
           Mobile App Development Services Across All Platforms
         </h1>
         <p className="text-dark fs-6 mx-auto" style={{ maxWidth: '600px' }}>
@@ -98,8 +98,8 @@ const MobileappSection = () => {
           {/* Case Study Bottom */}
           <div className="container mb-5">
             <div
-              className="d-flex flex-row align-items-start justify-content-between gap-3"
-              style={{ maxWidth: '800px', margin: '0 auto' }}
+              className="d-flex flex-row align-items-start justify-content-between gap-3 Case-Study-Bottom "
+              style={{ maxWidth: '800px', margin: '0 auto', }}
             >
               <p
                 className="text-dark fs-6 text-start mb-0 mx-2"
@@ -120,6 +120,7 @@ const MobileappSection = () => {
                   minWidth: '44px',
                   backgroundColor: '#76AC29',
                   borderRadius: '15px',
+
                 }}
               >
                 <i className="fa-solid fa-arrow-down-long text-white"></i>

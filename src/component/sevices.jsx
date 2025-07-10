@@ -7,7 +7,7 @@ function Services() {
     return (
         <div className="py-5 text-center">
             <div className="container text-dark">
-                <h1 className="servicesheading fw-bold fs-3 mb-3">
+                <h1 className="servicesheading fw-bold fs-1 mb-3">
                     Looking for other Services?
                 </h1>
                 <p className="mb-0">Explore our other related services to enhance the performance of your digital product.</p>

@@ -25,7 +25,7 @@ const ContactSection = () => {
             />
             <div className="row contact-top">
                 <div className="col-12 col-md-6 contact-top-left">
-                    <h2 className="contact-heading">Our Successful Mobile App Development Projects</h2>
+                    <h2 className="contact-heading fs-1">Our Successful Mobile App Development Projects</h2>
                     <p className="contact-para">
                         Ready to transform your ideas into powerful mobile apps? Contact us
                         today for a free consultation! Our expert team specializes in creating
@@ -105,7 +105,7 @@ const ContactSection = () => {
             </div>
 
             <div className="contact-bottom pt-0 pb-0 p-3 p-lg-0 p-md-0">
-                <h3 className="bottom-heading">
+                <h3 className="bottom-heading fs-1">
                     We specialize in delivering digital marketing solutions <br /> that drive
                     growth and success.
                 </h3>

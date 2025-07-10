@@ -365,7 +365,7 @@ const HeroSection = () => {
 
               {/* Talk to Us Section */}
               <div className={`slim-talk-to-us ${showForm ? 'move-to-banner' : ''}`}>
-                <div className='talk-to-us-section'>
+                <div className='talk-to-us-section d-none d-md-block '>
                   <button
                     className="talk-to-us"
                     onClick={() => setShowForm(true)}
