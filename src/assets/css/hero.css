@@ -337,7 +337,7 @@
   position: relative;
   width: 100%;
   height: 80vh;
-  min-height: 50vh;
+  min-height: 500px;
   overflow: hidden;
 }
 
@@ -515,7 +515,7 @@
   transition: all 0.3s ease;
   transform: rotate(-90deg);
   transform-origin: center;
-  
+
 }
 
 .talk-to-us:hover {
@@ -536,22 +536,6 @@
 }
 
 
-/* iPad Mini specific media query */
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  .three-slim-wrapper {
-    height: 45vh;
-    min-height: 300px;
-  }
-}
-
-/* For portrait orientation on iPad Mini */
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  .three-slim-wrapper {
-    height: 40vh;
-    min-height: 280px;
-  }
-}
-
 
 
 
@@ -562,7 +546,7 @@
     flex-direction: column;
     height: auto;
   }
-  
+
   .slim-content,
   .slim-banner,
   .slim-form {
@@ -572,16 +556,16 @@
     right: 0;
     top: 0;
   }
-  
+
   .slim-content.hide {
     display: none;
   }
-  
+
   .slim-banner.move-to-text {
     right: 0;
     width: 100%;
   }
-  
+
   .slim-talk-to-us {
     position: relative;
     right: 0;
@@ -589,31 +573,31 @@
     width: 100%;
     margin: 2rem 0;
   }
-  
+
   .slim-talk-to-us.move-to-banner {
     right: 0;
     width: 100%;
   }
-  
+
   .slim-form {
     position: relative;
     right: 0;
     width: 100%;
     padding: 1rem;
   }
-  
+
   .slim-form.slide-in {
     right: 0;
   }
-  
+
   .talk-to-us {
     transform: none;
   }
-  
+
   .talk-to-us:hover {
     transform: translateY(-2px);
   }
-  
+
 }
 
 /* Animation enhancements */
@@ -622,6 +606,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -633,6 +618,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(100%);
     opacity: 0;
@@ -995,6 +981,3 @@
 
 
 }
-
-
-

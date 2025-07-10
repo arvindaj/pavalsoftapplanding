@@ -133,6 +133,27 @@ const HeroSection = () => {
     }
   };
 
+  const handleShowForm = () => {
+    setShowForm(true);
+    // Prevent body scroll on mobile when form is open
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+    // Re-enable body scroll
+    document.body.style.overflow = '';
+  };
+
+  // Close form when clicking outside (for mobile)
+  const handleFormBackdropClick = (e) => {
+    if (e.target.classList.contains('slim-form')) {
+      handleCloseForm();
+    }
+  };
+
   const slideData = [
     { text: 'Our team is here to provide you with tailored solutions.' },
     { text: 'Transform your ideas into reality with our custom mobile app.' },
@@ -231,7 +252,7 @@ const HeroSection = () => {
       <div className="hero-content-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="three-slim-wrapper d-flex">
+            <div className="three-slim-wrapper d-flex ">
               {/* Text Content */}
               <div className={`slim-content ${showForm ? 'hide' : ''}`}>
                 <div className="hero-text-content">
