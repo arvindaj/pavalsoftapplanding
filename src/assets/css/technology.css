@@ -1,41 +1,42 @@
-/* ========== Wrapper to allow relative control ========== */
+/* ========== Base Styles ========== */
 .tech-img-wrapper {
   min-height: 500px;
+  position: relative;
 }
 
 .tech-img4 {
-    position: absolute;
-    left: 7% !important;
-    top: 30px !important;
-    z-index: 1;
-    max-height: 100%;
-    scale:calc(1.3);
-  }
+  position: absolute;
+  left: 7%;
+  top: 30px;
+  z-index: 1;
+  max-height: 100%;
+  scale: 1.3;
+}
 
 .tech-img6 {
-    position: absolute;
-    left: -22% !important;
-    top: -6%;
-    z-index: 2;
-    transform: scale(0.5);
-    scale: 0.9 !important;
-    opacity: 0.6 !important;
-  }
+  position: absolute;
+  left: -4%;
+  top: -20%;
+  z-index: 2;
+  transform: scale(0.5);
+  scale: 0.79;
+  width: 78%;
+}
 
-   .tech-img7 {
-    position: absolute;
-    left: -17% !important;
-    top: 100%;
-    width: 10%;
-    z-index: 0;
-  }
+.tech-img7 {
+  position: absolute;
+  left: -17%;
+  top: 100%;
+  width: 10%;
+  z-index: 0;
+}
 
-   .real-time-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    transform: translateY(-20px);
-  }
-
+.real-time-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  z-index: 3;
+}
 
 .end-to-end-heading {
   position: absolute;
@@ -53,7 +54,6 @@
   color: #fdb501;
 }
 
-
 .circle-container {
   width: 100%;
   height: auto;
@@ -69,7 +69,7 @@
 
 .circle {
   position: absolute;
-  border: 15px solid white;
+  border: 15px solid rgba(255, 255, 255, 0.734);
   border-radius: 50%;
   z-index: 1;
 }
@@ -79,7 +79,7 @@
   height: 450px;
   top: 150%;
   left: -20%;
-animation: rotateClock 8s linear infinite;
+  animation: rotateClock 8s linear infinite;
 }
 
 .circle2 {
@@ -87,10 +87,8 @@ animation: rotateClock 8s linear infinite;
   height: 200px;
   top: 490%;
   left: -20%;
-  animation: rotateClock 10s linear infinite reverse
-  
+  animation: rotateClock 10s linear infinite reverse;
 }
-
 
 /* Keyframes */
 @keyframes rotateClock {
@@ -102,166 +100,228 @@ animation: rotateClock 8s linear infinite;
   }
 }
 
+/* Hover box styling */
+.tech-hover-box {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* Medium screens (tablets and below) */
-@media screen and (max-width: 991px) {
+.tech-hover-box:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/* ========== Media Queries (Mobile First Approach) ========== */
+
+/* 320px only */
+@media screen and (width: 320px) {
+  .tech-img6 {
+    position: absolute !important;
+    left: 10% !important;
+    top: 20% !important;
+    width: 80% !important;
+    height: auto !important;
+    scale: 0.8 !important;
+    transform: scale(0.8) !important;
+    z-index: 2 !important;
+  }
+  
   .end-to-end-heading {
-    font-size: 1.5rem;
-    bottom: 10%;
-    padding-left: 15px;
+    position: static;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    margin-top: 20px;
     text-align: center;
+  }
+  
+  .real-time-text {
+    transform: translate(50px, 50px);
   }
 }
 
-/* Small screens (phones and small tablets) */
-@media screen and (max-width: 767px) {
+/* Extra small mobile (321px - 374px) */
+@media screen and (min-width: 321px) and (max-width: 374px) {
+  .end-to-end-heading {
+    position: static;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .real-time-text {
+    transform: translate(50px, 50px);
+  }
+
+  .tech-img6 {
+    left: 15%;
+    scale: 0.9;
+    top: 29%;
+  }
+}
+
+/* iPhone 6/7/8 and similar devices (375px) */
+@media screen and (width: 375px) {
+  .tech-img6 {
+    left: 10%;
+    top: 23%;
+    scale: 0.95;
+    width: 80%;
+  }
+  
+  .end-to-end-heading {
+    position: static;
+    font-size: 1.25rem;
+    padding: 15px 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .real-time-text {
+    transform: translate(40px, 40px);
+  }
+}
+
+/* Small mobile (376px - 480px) */
+@media screen and (min-width: 376px) and (max-width: 480px) {
+  .end-to-end-heading {
+    position: static;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .real-time-text {
+    transform: translate(50px, 50px);
+  }
+
+  .tech-img6 {
+    left: 10%;
+    scale: 0.9;
+    top: 15%;
+  }
+}
+
+/* Small mobile (481px - 520px) */
+@media screen and (min-width: 481px) and (max-width: 520px) {
+  .tech-img4,
+  .tech-img7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    scale: 1.3;
+  }
+
+  .circle1 {
+    display: block;
+    top: -290%;
+  }
+
+  .circle2 {
+    display: block;
+    top: -390%;
+  }
+
+  .tech-img4 {
+    max-width: 85%;
+    margin-bottom: 10px;
+  }
+
+  .tech-img6 {
+    left: 29%;
+    scale: 1.19;
+    top: 21%;
+  }
+
+  .tech-img7 {
+    width: 45px;
+    margin-top: 10px;
+  }
+  
   .end-to-end-heading {
     font-size: 1.3rem;
     bottom: 5%;
     padding-left: 10px;
     text-align: center;
   }
+  
+  .real-time-text {
+    transform: translateY(-10px);
+  }
 }
 
-/* Extra small mobile (≤ 480px) */
-@media screen and (max-width: 480px) {
+/* Medium mobile to small tablet (521px - 767px) */
+@media screen and (min-width: 521px) and (max-width: 767px) {
   .end-to-end-heading {
-    position: static;
-    font-size: 1.2rem;
-    padding: 15px 10px;
-    margin-top: 20px;
-    text-align: center;
-  }}
-
-
-  @media screen and (width: 480px) {
-  .end-to-end-heading {
-    position: static;
-    font-size: 1.2rem;
-    padding: 15px 10px;
-    margin-top: 20px;
+    font-size: 1.3rem;
+    bottom: 5%;
+    padding-left: 10px;
     text-align: center;
   }
-}
-
-
-@media (max-width: 540px ) {
-
- .real-time-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    transform: translateY(-10px ,45px); 
+  
+  .tech-img7 {
+    display: none;
   }
 }
 
+/* Tablet (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .end-to-end-heading {
+    font-size: 1.5rem;
+    bottom: 10%;
+    padding-left: 15px;
+    text-align: center;
+  }
+  
+  .tech-img7 {
+    display: none;
+  }
 
-@media (max-width: 1024px) {
-
-    .real-time-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    transform: translateY(-20px);
+   .tech-img6 {
+    left: -7%;
+    top: -21%;
+    scale: calc(0.6)
   }
 }
 
-
-
-/* ========== Desktop styles (≥992px) ========== */
-@media (min-width: 992px) {
-  .tech-img-wrapper {
-    position: relative;
-  }
-
+/* Large tablet to small desktop (992px - 1023px) */
+@media screen and (min-width: 992px) and (max-width: 1023px) {
   .tech-img4 {
     left: -25%;
     top: 0;
-    z-index: 1;
-    max-height: 100%;
-    scale:calc(1.5);
-  }
-
-  .tech-img6 {
-    position: absolute;
-    left: -32%;
-    top: -6%;
-    z-index: 2;
-    transform: scale(0.5);
-    scale: 0.7;
-    opacity: 0.6;
-  }
-
-  .tech-img7 {
-    position: absolute;
-    left: -23%;
-    top: 100%;
-    width: 10%;
-    z-index: 0;
-  }
-}
-
-/* ========== Mobile styles (≤520px, incl. 320px) ========== */
-@media (max-width: 520px) {
-  .tech-img4,
-  .tech-img6,
-  .tech-img7 {
-    position: relative !important;
-    display: block !important;
-    margin-left: auto;
-    margin-right: auto;
-    scale:calc(1.3);
-  }
-
-  .circle1{
-      display: block !important;
-      top: -290%;
-
-  }
-
- .circle2{
-      display: block !important;
-      top: -390%;
-  }
-
-  .tech-img4 {
-    max-width: 85% !important;
-    margin-bottom: 10px;
-  }
-
-  .tech-img6 {
-    max-width: 70% !important;
-    transform: scale(0.6) !important;
-    margin-bottom: 10px;
-  }
-
-  .tech-img7 {
-    width: 45px !important;
-    margin-top: 10px;
-  }
-}
-
-/* ========== Specific 320px override (optional) ========== */
-@media (max-width: 320px) {
-  .tech-img6 {
-    transform: scale(0.5) !important;
+    scale: 1.5;
   }
   
 
   .tech-img7 {
-    width: 40px !important;
+    left: -23%;
+    top: 100%;
+    width: 10%;
+    display: none;
   }
 }
 
-/* ========== Hide tech-img6 and tech-img7 below 1024px ========== */
-@media (max-width: 1023.98px) {
-  .tech-img6,
+/* Desktop (1024px - 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .tech-img4 {
+    left: 15%;
+    top: 0;
+    scale: 1.5;
+  }
+  .tech-img6 {
+    left: 7%;
+    scale: 1;
+    top: -10%;
+    scale: calc(0.9)
+  }
   .tech-img7 {
-    display: none !important;
+    left: -23%;
+    top: 100%;
+    width: 10%;
   }
-}
-
-
-/* ========== Show background image above 1024px ========== */
-@media (min-width: 1024px) {
+  
   .bg-tech-img {
     display: block;
     height: 100%;
@@ -273,60 +333,55 @@ animation: rotateClock 8s linear infinite;
     height: 100%;
     width: 100%;
   }
-}
-
-
-
-@media (min-width: 1440px) {
-  .real-time-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    transform: translate(50px,50px) !important;
-  }
-}
-
-@media (min-width: 320px) {
-  .real-time-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    transform: translate(50px,50px) !important;
-  }
-}
-
-/* Default: visible and centered on mobile */
-.real-time-text {
-  margin-top: 1rem;
-  z-index: 3;
-}
-
-/* Large screen (≥1024px): absolutely position below image */
-@media (min-width: 1024px) {
-  .tech-img-wrapper {
-    position: relative;
-  }
-
+  
   .real-time-text {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    z-index: 3;
-    /* background: rgba(255, 255, 255, 0.7); optional: improves visibility */
     padding: 4px 8px;
     border-radius: 6px;
   }
 }
 
+/* Large desktop (≥ 1440px) */
+@media screen and (min-width: 1440px) {
+  .tech-img4 {
+    left: 5%;
+    top: 0;
+    scale: 1.5;
+  }
+    .tech-img6 {
+    left: -5%;
+    top: -22%;
+  }
 
-/* Hover box styling */
-.tech-hover-box {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  /* background-color: #ffffff; */
-}
+  .tech-img7 {
+    left: -23%;
+    top: 100%;
+    width: 10%;
+  }
+  
+  .bg-tech-img {
+    display: block;
+    height: 100%;
+  }
 
-.tech-hover-box:hover {
-  background-color: #f2f2f2; /* light gray background on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
+  .bg-tech-img img {
+    object-fit: cover;
+    transform: translateY(-20%);
+    height: 100%;
+    width: 100%;
+  }
+  
+  .real-time-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    margin: 0;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
 }

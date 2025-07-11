@@ -3,7 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bg from '../assets/img/techblackbg.png';
-import img4 from '../assets/img/Group 69.png';
+import img4 from '../assets/img/oneslidegreen.png';
+import img6 from '../assets/img/tabman.png';
 import img5 from '../assets/img/Mask group.png';
 import icon1 from '../assets/img/ALML.png';
 import icon2 from '../assets/img/compute-vission.png';
@@ -45,6 +46,7 @@ function TechnologiesPage() {
           {/* Left Image Section */}
           <div className="col-12 col-lg-6 d-flex flex-column align-items-center position-relative tech-img-wrapper">
             <img src={img4} alt="Phone frame" className="img-fluid tech-img4 p-2" data-aos="fade-right" />
+            <img src={img6} alt="Phone frame" className="img-fluid tech-img6 p-2" data-aos="fade-right" />
             <div className="circle-container d-flex justify-content-center align-items-center position-relative">
               <div className="circle circle1"></div>
               <div className="circle circle2 "></div>

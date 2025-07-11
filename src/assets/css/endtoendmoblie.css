@@ -1,6 +1,6 @@
 /* General Styles */
 .case-study-section {
-  background-color: #fff;
+  /* background-color: #fff; */
   height: max-content;
   font-family: "Poppins", sans-serif;
   padding: 2rem 1rem;
@@ -21,7 +21,7 @@
 }
 
 .case-study-card {
-  background-color: #ffffff;
+  background-color: none;
   border-radius: 12px;
   height: 170px;
   width: 250px;
@@ -85,6 +85,7 @@ padding: 10px;
 .badge-img {
   width: 40px;
   height: 40px;
+  
 }
 
 .case-study-bottom-section {
@@ -246,23 +247,20 @@ padding: 10px;
   }
 
   .card-text h1 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .card-text p {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .card-badge,
   .card-bg {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 
-  .badge-img {
-    width: 30px;
-    height: 30px;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -297,9 +295,16 @@ padding: 10px;
     height: 40px;
   }
 
+    .card-text p{
+    font-size: 14px;
+  }
+  .card-text h1{
+    font-size: 16px;
+  }
   .badge-img {
-    width: 25px;
-    height: 25px;
+    width: 39px;
+    height: 39px;
+    margin-left: -70%;
   }
 }
 
@@ -338,5 +343,16 @@ padding: 10px;
     font-size: 12px;
     padding: 8px 16px;
     margin-top: 1rem;
+  }
+  .card-text p{
+    font-size: 14px;
+  }
+  .card-text h1{
+    font-size: 16px;
+  }
+  .badge-img {
+    width: 39px;
+    height: 39px;
+    margin-left: -70%;
   }
 }
