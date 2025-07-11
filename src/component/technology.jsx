@@ -51,9 +51,9 @@ function TechnologiesPage() {
               <div className="circle circle1"></div>
               <div className="circle circle2 "></div>
             </div>
-            <p className="real-time-text text-dark fs-6 fw-medium text-start ">
+            {/* <p className="real-time-text text-dark fs-6 fw-medium text-start ">
               Real Time Experience
-            </p>
+            </p> */}
           </div>
 
 
